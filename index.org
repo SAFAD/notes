@@ -1,0 +1,202 @@
+#+TITLE: Some useful links, quick tips and tricks
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="solarized-light.min.css" />
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="main.css" />
+* crypto
+** misc
+- [[http://www.cs.bham.ac.uk/~mdr/teaching/modules04/security/lectures/hash.html][One-way secure hash function]]
+- [[https://crackstation.net/hashing-security.htm][Salted Password Hashing - Doing it Right]]
+** stackveflow
+-  [[http://security.stackexchange.com/questions/4781/do-any-security-experts-recommend-bcrypt-for-password-storage/6415#6415][Do any security experts recommend bcrypt for password storage?]]
+-  [[http://security.stackexchange.com/questions/11717/why-are-hash-functions-one-way-if-i-know-the-algorithm-why-cant-i-calculate-t][Why are hash functions one way? If I know the algorithm, why can't I calculate the input from it?]]
+-  [[http://stackoverflow.com/questions/2112685/how-do-one-way-hash-functions-work][How do one-way hash functions work?]]
+-  [[http://security.stackexchange.com/questions/5668/where-can-i-learn-cryptography-cryptanalysis-the-hard-way-without-going-to-scho][Where can I learn cryptography/cryptanalysis the hard way, without going to school ? Any good book?]]
+-  [[http://stackoverflow.com/questions/549/the-definitive-guide-to-form-based-website-authentication][The definitive guide to form based website authentication]]
+** coding Horror
+-  [[http://blog.codinghorror.com/youre-probably-storing-passwords-incorrectly/][You're Probably Storing Passwords Incorrectly]]
+-  [[http://blog.codinghorror.com/speed-hashing/][Speed Hashing]]
+-  [[http://blog.codinghorror.com/rainbow-hash-cracking/][Rainbow Hash Cracking]]
+-  [[http://www.securityfocus.com/blogs/262][Enough With The Rainbow Tables: What You Need To Know About Secure Password Schemes]]
+-  [[http://blog.codinghorror.com/dictionary-attacks-101/][Dictionary Attacks 101]]
+* git
+** links
+- [[http://stackoverflow.com/questions/5299526/github-commiting-push-gist][github commiting (push) gist]]
+- [[http://wildlyinaccurate.com/a-hackers-guide-to-git/][A Hacker's Guide to Git]]
+- [[https://codewords.recurse.com/issues/two/git-from-the-inside-out][Git from the inside out]]
+**  [[http://stackoverflow.com/questions/2003505/delete-a-git-branch-both-locally-and-remotely][delete a Git branch both locally and remotely]]
+- ~git push origin --delete <branchName>~
+** delete a remote tag
+- ~git tag -d v0.1~
+- ~git push origin :refs/tags/v0.1~
+- ~git push --delete origin v0.1~
+** reset the last commit, but keep changes
+- ~git reset --soft HEAD^~
+** reset the last commit, throw away your changes
+- ~git reset --hard HEAD^~
+** force git push master to origin
+- ~git push origin +master~
+** update a file form a branch (master for example)
+- ~git checkout master -- file.txt~
+* misc
+- [[http://christiantietze.de/posts/2014/07/knowledge-cycle-efficiently-organize-writing-projects/][use a Short Knowledge Cycle to Keep Your Cool]]
+- [[https://gist.github.com/endolith/157796][emoji]]
+- [[http://www.spreeder.com/][spreeder]]
+* maven
+** custome jar name
+#+BEGIN_SRC nxml
+<project>
+    <name>jaxrs-ember</name>
+</project>
+#+END_SRC
+** create one fat jar for a jersey 2 application (solution found at [[http://stackoverflow.com/questions/12611213/jersey-exception-only-thrown-when-depencencies-assembled-into-a-single-jar][Jersey exception only thrown when depencencies assembled into a single jar]])
+#+BEGIN_SRC nxml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-shade-plugin</artifactId>
+    <version>2.3</version>
+    <executions>
+        <execution>
+            <phase>package</phase>
+                <goals>
+                    <goal>shade</goal>
+                </goals>
+            <configuration>
+                <transformers>
+                    <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
+                    <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                        <mainClass>${mainClass}</mainClass>
+                    </transformer>
+                </transformers>
+                <filters>
+                    <filter>
+                        <artifact>*:*</artifact>
+                        <excludes>
+                            <exclude>META-INF/*.SF</exclude>
+                            <exclude>META-INF/*.DSA</exclude>
+                            <exclude>META-INF/*.RSA</exclude>
+                        </excludes>
+                    </filter>
+                </filters>
+                <finalName>${fat-jar-name}</finalName>\
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+#+END_SRC
+** renanme a jar-with-dependencies file created by maven-assembly-plugin
+add this two elements to the maven-assembly-plugin configuration
+element:
+#+BEGIN_SRC nxml
+<configuration>
+    ...
+    <finalName>fat-jar-name</finalName>
+    <appendAssemblyId>false</appendAssemblyId>
+</configuration>
+#+END_SRC
+** [[https://maven.apache.org/plugins/maven-remote-resources-plugin/examples/sharing-resources.html][sharing resources]]
+** download javadocs
+~mvn dependency:resolve -Dclassifier=javadoc~
+* gnu make
+** links
+- [[http://nuclear.mutantstargoat.com/articles/make/][Practical Makefiles, by example]]
+- [[http://stackoverflow.com/questions/2145590/what-is-the-purpose-of-phony-in-a-makefile][What is the purpose of .PHONY in a makefile?]]
+** [[https://segment.com/blog/how-we-use-make/][make for the frontend (or how segment.io uses make)]]
+#+BEGIN_SRC
+.PHONY: bundle
+BIN=./node_modules/.bin
+GULP?= $(BIN)/gulp
+
+bundle:
+    $(GULP) bundle
+#+END_SRC
+
+* emacs
+** auctex
+*** [[http://www.gnu.org/software/auctex/manual/auctex.html#Folding][floding]]
+- Command: TeX-fold-comment
+  ~(C-c C-o C-c)~ Hide the comment point is located on.
+
+- Command: TeX-fold-region
+  ~(C-c C-o C-r)~  Hide all configured macros in the marked region.
+
+- Command: TeX-fold-clearout-region
+  ~(C-c C-o r)~ Permanently unfold all macros and environments in the marked region.
+** python
+-  [[http://www.jesshamrick.com/2012/09/18/emacs-as-a-python-ide/][Emacs as a Python IDE]]
+** dired
+- [[http://stackoverflow.com/questions/2858097/cutomizing-dired][humanize file sizes]]
+~C-u s~ and add h to the args.
+** erase-buffer
+~M-x erase-buffer~
+* python
+- [[https://districtdatalabs.silvrback.com/how-to-develop-quality-python-code][How to Develop Quality Python Code]]
+* latex
+** color
+   \usepackage{color}
+     {\color{red}
+     red text.
+   }
+** [[http://tex.stackexchange.com/questions/10372/in-line-verb-overfull-hbox-problem][In-line \verb — overfull hbox problem]]
+always use ~\texttt~ or ~\ttfamily~ for longer text instead of
+~\verb||~.
+** caption package
+customize figure and table names in captions:
+- ~\captionsetup[figure]{name=Figure.}~
+- ~\captionsetup[table]{name=Table.}~
+** style itemize
+#+BEGIN_SRC tex
+\begin{itemize}
+\renewcommand\labelitemi{--}
+\item asdasd
+\item dsfsdf
+\end{itemize
+#+END_SRC
+** [[http://tex.stackexchange.com/questions/23403/how-can-i-produce-an-unnumbered-chapter-for-the-introduction][How can I produce an unnumbered chapter for the introduction?]]
+   \chapter*{introduction}
+   \addcontentsline{toc}{chapter}{Introduction} \markboth{INTRODUCTION}{}
+** rsfs fonts for math
+- install the package via: ~tlmgr install rsfs~.
+- import the package in the preamble:
+#+BEGIN_SRC tex
+\usepackage{mathrsfs}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+#+END_SRC
+- use it!
+#+BEGIN_SRC tex
+$mathpzc{uppercase or lowercase characters}$
+#+END_SRC
+** [[http://ctan.org/pkg/enumitem][enumitem]]: Control layout of itemize, enumerate, description
+   Add ~\usepackage{enumitem}~ to enable better default items
+   indention.
+** arabic typesetting
+#+BEGIN_SRC tex
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{arabtex} \usepackage{utf8}
+
+\begin{document}
+\setcode{utf8}
+\begin{arabtext}
+ السَلامُ عَليكم ورَحمةُ الله وبَركاته \end{arabtext} \end{document}
+#+END_SRC
+** inline enumerate items with a modified label
+- a [[http://tex.stackexchange.com/questions/103086/customizing-inline-enumerate-with-enumitem-still-not-working][link]] to the source.
+- use ~enumitem~ package with ~inline~ option to enable inlined
+  enumeration command (~enumerate*~).
+#+BEGIN_SRC tex
+\usepackage[inline]{enumitem}
+#+END_SRC
+- define `inlinelist` command:
+#+BEGIN_SRC tex
+\newlist{inlinelist}{enumerate*}{1}
+\setlist*[inlinelist,1]{%
+  label=(\roman*),
+}
+#+END_SRC
+* ubuntu
+** public ip
+~curl ipecho.net/plain ; echo~
+** finding the PID of the process using a specific port?
+~sudo netstat -nlp | grep 80~
+* stackoverflow-tips
+** <kbd>[**GoPlay**](http://play.golang.org/)</kbd>
+a link to goplay example
