@@ -192,6 +192,15 @@ $mathpzc{uppercase or lowercase characters}$
   label=(\roman*),
 }
 #+END_SRC
+** center figure that is wider than \textwidth
+- [[http://tex.stackexchange.com/questions/16582/center-figure-that-is-wider-than-textwidth][tex.stackexchange]]
+#+BEGIN_SRC tex
+%% use the package in the main file
+\usepackage[export]{adjustbox}
+
+%% enable centre option
+\includegraphics[width=1.2\textwidth, center]{figure.eps}
+#+END_SRC
 * ubuntu
 ** public ip
 ~curl ipecho.net/plain ; echo~

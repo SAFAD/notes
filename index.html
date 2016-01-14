@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Some useful links, quick tips and tricks</title>
-<!-- 2016-01-08 ج 12:45 -->
+<!-- 2016-01-14 خ 19:48 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Salah Eddine" />
@@ -244,6 +244,7 @@ for the JavaScript code in this tag.
 <li><a href="#sec-8-7">8.7. enumitem: Control layout of itemize, enumerate, description</a></li>
 <li><a href="#sec-8-8">8.8. arabic typesetting</a></li>
 <li><a href="#sec-8-9">8.9. inline enumerate items with a modified label</a></li>
+<li><a href="#sec-8-10">8.10. center figure that is wider than \textwidth</a></li>
 </ul>
 </li>
 <li><a href="#sec-9">9. ubuntu</a>
@@ -717,6 +718,24 @@ enumeration command (<code>enumerate*</code>).
 </div>
 </div>
 </div>
+<div id="outline-container-sec-8-10" class="outline-3">
+<h3 id="sec-8-10"><span class="section-number-3">8.10</span> center figure that is wider than \textwidth</h3>
+<div class="outline-text-3" id="text-8-10">
+<ul class="org-ul">
+<li><a href="http://tex.stackexchange.com/questions/16582/center-figure-that-is-wider-than-textwidth">tex.stackexchange</a>
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-tex">%% use the package in the main file
+\usepackage[export]{adjustbox}
+
+%% enable centre option
+\includegraphics[width=1.2\textwidth, center]{figure.eps}
+</pre>
+</div>
+</div>
+</div>
 </div>
 <div id="outline-container-sec-9" class="outline-2">
 <h2 id="sec-9"><span class="section-number-2">9</span> ubuntu</h2>
@@ -753,7 +772,7 @@ a link to goplay example
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Salah Eddine</p>
-<p class="date">Created: 2016-01-08 ج 12:45</p>
+<p class="date">Created: 2016-01-14 خ 19:48</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
