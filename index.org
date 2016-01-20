@@ -201,6 +201,11 @@ $mathpzc{uppercase or lowercase characters}$
 %% enable centre option
 \includegraphics[width=1.2\textwidth, center]{figure.eps}
 #+END_SRC
+** centering caption of a figure
+- [[http://tex.stackexchange.com/questions/54475/centering-caption-of-a-figure][tex.stackexchange]]
+#+BEGIN_SRC tex
+\usepackage[justification=centering]{caption}
+#+END_SRC
 * ubuntu
 ** public ip
 ~curl ipecho.net/plain ; echo~
