@@ -211,6 +211,61 @@ $mathpzc{uppercase or lowercase characters}$
 ~curl ipecho.net/plain ; echo~
 ** finding the PID of the process using a specific port?
 ~sudo netstat -nlp | grep 80~
+* php
+** install nginx/php7/mysql on ubuntu 14.04 LTS
+*** install nginx
+#+BEGIN_SRC sh
+sudo apt-get install nginx
+#+END_SRC
+
+*** install php7
+#+BEGIN_SRC sh
+sudo add-apt-repository ppa:ondrej/php
+
+sudo apt-get install -y language-pack-en-base
+
+sudo LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php
+
+sudo apt-get install php7.0-fpm php7.0-sqlite php7.0-mysql
+#+END_SRC
+
+*** restart nginx and php7
+#+BEGIN_SRC sh
+sudo service nginx restart
+
+sudo service php7.0-fpm restart
+#+END_SRC
+*** configuration file example
+- create a ~dev.conf~ file at ~/etc/nginx/sites-available~:
+
+#+BEGIN_SRC sh
+server {
+    listen 3001 default_server;
+    listen [::]:3001 default_server ipv6only=on;
+
+    root /var/www/dev;
+    index index.php;
+
+    server_name localhost;
+
+    location / {
+    ;;    rewrite ^/$ /kickstart/ break;
+    }
+
+    location ~ \.php$ {
+        try_files $uri =404;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+}
+#+END_SRC
+
+- enable ~dev.conf~ configuration by:
+~ln -s /etc/nginx/sites-available/dev.conf /etc/nginx/sites-enables/dev.conf~
+
 * stackoverflow-tips
 ** <kbd>[**GoPlay**](http://play.golang.org/)</kbd>
 a link to goplay example
