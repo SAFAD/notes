@@ -266,6 +266,9 @@ server {
 - enable ~dev.conf~ configuration by:
 ~ln -s /etc/nginx/sites-available/dev.conf /etc/nginx/sites-enables/dev.conf~
 
+* nginx
+** virtual hosts
+*** TODO 
 * stackoverflow-tips
 ** <kbd>[**GoPlay**](http://play.golang.org/)</kbd>
 a link to goplay example
