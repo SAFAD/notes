@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Some useful links, quick tips and tricks</title>
-<!-- 2016-02-11 خ 12:34 -->
+<!-- 2016-03-07 ن 11:10 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Salah Eddine" />
@@ -252,6 +252,7 @@ for the JavaScript code in this tag.
 <ul>
 <li><a href="#sec-9-1">9.1. public ip</a></li>
 <li><a href="#sec-9-2">9.2. finding the PID of the process using a specific port?</a></li>
+<li><a href="#sec-9-3">9.3. newgrp</a></li>
 </ul>
 </li>
 <li><a href="#sec-10">10. php</a>
@@ -792,7 +793,29 @@ enumeration command (<code>enumerate*</code>).
 </p>
 </div>
 </div>
+<div id="outline-container-sec-9-3" class="outline-3">
+<h3 id="sec-9-3"><span class="section-number-3">9.3</span> newgrp</h3>
+<div class="outline-text-3" id="text-9-3">
+<p>
+<code>newgrp</code> is used to change the current group <code>ID</code> during a login
+session, it changes the current real group <code>ID</code> to the named group.
+</p>
+
+<p>
+I used this after adding my user name to the <code>docker</code> group (during
+the <code>docker</code> post-installation):
+</p>
+
+<ul class="org-ul">
+<li><code>$ sudo usermod -aG docker $USER</code>
+</li>
+<li><code>$ newgrp docker</code>
+</li>
+</ul>
 </div>
+</div>
+</div>
+
 <div id="outline-container-sec-10" class="outline-2">
 <h2 id="sec-10"><span class="section-number-2">10</span> php</h2>
 <div class="outline-text-2" id="text-10">
@@ -912,7 +935,7 @@ a link to goplay example
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Salah Eddine</p>
-<p class="date">Created: 2016-02-11 خ 12:34</p>
+<p class="date">Created: 2016-03-07 ن 11:10</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>

@@ -211,6 +211,16 @@ $mathpzc{uppercase or lowercase characters}$
 ~curl ipecho.net/plain ; echo~
 ** finding the PID of the process using a specific port?
 ~sudo netstat -nlp | grep 80~
+** newgrp
+~newgrp~ is used to change the current group ~ID~ during a login
+session, it changes the current real group ~ID~ to the named group.
+
+I used this after adding my user name to the ~docker~ group (during
+the ~docker~ post-installation):
+
+- ~$ sudo usermod -aG docker $USER~
+- ~$ newgrp docker~
+
 * php
 ** install nginx/php7/mysql on ubuntu 14.04 LTS
 *** install nginx
@@ -268,7 +278,7 @@ server {
 
 * nginx
 ** virtual hosts
-*** TODO 
+*** TODO
 * stackoverflow-tips
 ** <kbd>[**GoPlay**](http://play.golang.org/)</kbd>
 a link to goplay example
