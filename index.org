@@ -287,6 +287,19 @@ chown www-data:www-data -R *          # Let apache be owner
 find . -type d -exec chmod 755 {} \;  # Change directory permissions rwxr-xr-x
 find . -type f -exec chmod 644 {} \;  # Change file permissions rw-r--r--
 #+END_SRC
+* css
+** How to center absolute element in div?
+- [[http://stackoverflow.com/questions/1776915/how-to-center-absolute-element-in-div][stackoverflow: How to center absolute element in div?]]
+
+#+BEGIN_SRC css
+#content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+#+END_SRC
 * stackoverflow-tips
 ** <kbd>[**GoPlay**](http://play.golang.org/)</kbd>
 a link to goplay example
