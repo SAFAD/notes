@@ -279,6 +279,14 @@ server {
 * nginx
 ** virtual hosts
 *** TODO
+* wordpress
+** proper wordpress filesystem permissions and ownerships (chmod)
+- [[http://stackoverflow.com/questions/18352682/correct-file-permissions-for-wordpress][stackoverflow: Correct file permissions for WordPress]]
+#+BEGIN_SRC sh
+chown www-data:www-data -R *          # Let apache be owner
+find . -type d -exec chmod 755 {} \;  # Change directory permissions rwxr-xr-x
+find . -type f -exec chmod 644 {} \;  # Change file permissions rw-r--r--
+#+END_SRC
 * stackoverflow-tips
 ** <kbd>[**GoPlay**](http://play.golang.org/)</kbd>
 a link to goplay example
