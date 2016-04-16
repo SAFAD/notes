@@ -275,10 +275,19 @@ server {
 
 - enable ~dev.conf~ configuration by:
 ~ln -s /etc/nginx/sites-available/dev.conf /etc/nginx/sites-enables/dev.conf~
+** get error messages in php
+
+#+BEGIN_SRC php
+ini_set('display_startup_errors',1);
+ini_set('display_errors',1);
+error_reporting(-1);
+#+END_SRC
 
 * nginx
 ** virtual hosts
 *** TODO
+* apache
+** htacess
 * wordpress
 ** proper wordpress filesystem permissions and ownerships (chmod)
 - [[http://stackoverflow.com/questions/18352682/correct-file-permissions-for-wordpress][stackoverflow: Correct file permissions for WordPress]]
