@@ -22,7 +22,7 @@
 - [[http://stackoverflow.com/questions/5299526/github-commiting-push-gist][github commiting (push) gist]]
 - [[http://wildlyinaccurate.com/a-hackers-guide-to-git/][A Hacker's Guide to Git]]
 - [[https://codewords.recurse.com/issues/two/git-from-the-inside-out][Git from the inside out]]
-**  [[http://stackoverflow.com/questions/2003505/delete-a-git-branch-both-locally-and-remotely][delete a Git branch both locally and remotely]]
+** [[http://stackoverflow.com/questions/2003505/delete-a-git-branch-both-locally-and-remotely][delete a Git branch both locally and remotely]]
 - ~git push origin --delete <branchName>~
 ** delete a remote tag
 - ~git tag -d v0.1~
@@ -83,8 +83,8 @@
 </plugin>
 #+END_SRC
 ** renanme a jar-with-dependencies file created by maven-assembly-plugin
-add this two elements to the maven-assembly-plugin configuration
-element:
+   add this two elements to the maven-assembly-plugin configuration
+   element:
 #+BEGIN_SRC nxml
 <configuration>
     ...
@@ -94,7 +94,7 @@ element:
 #+END_SRC
 ** [[https://maven.apache.org/plugins/maven-remote-resources-plugin/examples/sharing-resources.html][sharing resources]]
 ** download javadocs
-~mvn dependency:resolve -Dclassifier=javadoc~
+   ~mvn dependency:resolve -Dclassifier=javadoc~
 * gnu make
 ** links
 - [[http://nuclear.mutantstargoat.com/articles/make/][Practical Makefiles, by example]]
@@ -208,28 +208,27 @@ $mathpzc{uppercase or lowercase characters}$
 #+END_SRC
 * ubuntu
 ** public ip
-~curl ipecho.net/plain ; echo~
+   ~curl ipecho.net/plain ; echo~
 ** finding the PID of the process using a specific port?
-~sudo netstat -nlp | grep 80~
+   ~sudo netstat -nlp | grep 80~
 ** newgrp
-~newgrp~ is used to change the current group ~ID~ during a login
-session, it changes the current real group ~ID~ to the named group.
+   ~newgrp~ is used to change the current group ~ID~ during a login
+   session, it changes the current real group ~ID~ to the named group.
 
-I used this after adding my user name to the ~docker~ group (during
-the ~docker~ post-installation):
+   I used this after adding my user name to the ~docker~ group (during
+   the ~docker~ post-installation):
 
 - ~$ sudo usermod -aG docker $USER~
 - ~$ newgrp docker~
 * docker
 ** stop all containers
-  ~$ docker stop $(docker ps -a -q)~
+   ~$ docker stop $(docker ps -a -q)~
 * php
 ** install nginx/php7/mysql on ubuntu 14.04 LTS
 *** install nginx
 #+BEGIN_SRC sh
 sudo apt-get install nginx
 #+END_SRC
-
 *** install php7
 #+BEGIN_SRC sh
 sudo add-apt-repository ppa:ondrej/php
@@ -244,7 +243,6 @@ sudo apt-get install php7.0-fpm php7.0-sqlite php7.0-mysql
 *** restart nginx and php7
 #+BEGIN_SRC sh
 sudo service nginx restart
-
 sudo service php7.0-fpm restart
 #+END_SRC
 *** configuration file example
@@ -278,7 +276,6 @@ server {
 - enable ~dev.conf~ configuration by:
 ~ln -s /etc/nginx/sites-available/dev.conf /etc/nginx/sites-enables/dev.conf~
 ** get error messages in php
-
 #+BEGIN_SRC php
 ini_set('display_startup_errors',1);
 ini_set('display_errors',1);
@@ -311,6 +308,7 @@ find . -type f -exec chmod 644 {} \;  # Change file permissions rw-r--r--
     margin-right: auto;
 }
 #+END_SRC
+** On-Scroll animated header
 * stackoverflow-tips
 ** <kbd>[**GoPlay**](http://play.golang.org/)</kbd>
 a link to goplay example
