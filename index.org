@@ -312,6 +312,12 @@ find . -type f -exec chmod 644 {} \;  # Change file permissions rw-r--r--
 #+END_SRC
 ** On-Scroll animated header
 ** BEM
+* front-end reads
+** [[https://developer.yahoo.com/performance/rules.html][Best Practices for Speeding Up Your Web Site]]
+** [[http://complexspiral.com/publications/containing-floats/][Eric A.Meyer: Containing Floats]]
+** [[https://slack-files.com/T03JT4FC2-F151AAF7A-13fe6f98da][You (probably) don't need a JavaScript framework]]
+** [[http://wtfhtmlcss.com/][WTF, HTML and CSS?]]
+** [[http://tympanus.net/codrops/][Codrops]]
 * stackoverflow-tips
 ** <kbd>[**GoPlay**](http://play.golang.org/)</kbd>
 a link to goplay example
