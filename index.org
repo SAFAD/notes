@@ -98,7 +98,7 @@
 * gnu make
 ** links
 - [[http://nuclear.mutantstargoat.com/articles/make/][Practical Makefiles, by example]]
-- [[http://stackoverflow.com/questions/2145590/what-is-the-purpose-of-phony-in-a-makefile][What is the purpose of .PHONY in a makefile?]]
+- [[http://stackoverflow.com/questions/2145590/what-is-the-purpose-of-phony-in-a-makefile][What is the purpose of .PHNY in a makefile?]]
 ** [[https://segment.com/blog/how-we-use-make/][make for the frontend (or how segment.io uses make)]]
 #+BEGIN_SRC
 .PHONY: bundle
@@ -129,6 +129,8 @@ bundle:
 ~M-x erase-buffer~
 * python
 - [[https://districtdatalabs.silvrback.com/how-to-develop-quality-python-code][How to Develop Quality Python Code]]
+* npm
+** using [[https://github.com/Qard/onchange][onChange]] for watching files
 * latex
 ** color
    \usepackage{color}
@@ -309,6 +311,7 @@ find . -type f -exec chmod 644 {} \;  # Change file permissions rw-r--r--
 }
 #+END_SRC
 ** On-Scroll animated header
+** BEM
 * stackoverflow-tips
 ** <kbd>[**GoPlay**](http://play.golang.org/)</kbd>
 a link to goplay example
