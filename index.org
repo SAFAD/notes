@@ -282,8 +282,18 @@ server {
 ini_set('display_startup_errors',1);
 ini_set('display_errors',1);
 error_reporting(-1);
-#+END_SRC
+#+END_SRC php
 
+* drupal7
+** How to fix "The following module is missing from the file system..." warning messages
+*** Clearing the cache
+   - Delete the modules from the database:
+     ~drush sql-query "DELETE from system where name='name' AND type = 'module';"~
+   - Clear the cache with drush:
+     ~drush cc all~
+*** Using  [[https://www.drupal.org/project/module_missing_message_fixer][Module Missing Message Fixer]]
+** Drupal debuging:
+*** [[https://www.drupal.org/project/devel][Devel]]
 * nginx
 ** virtual hosts
 *** TODO
