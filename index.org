@@ -292,8 +292,22 @@ error_reporting(-1);
    - Clear the cache with drush:
      ~drush cc all~
 *** Using  [[https://www.drupal.org/project/module_missing_message_fixer][Module Missing Message Fixer]]
-** Drupal debuging:
+** Drupal debuging
 *** [[https://www.drupal.org/project/devel][Devel]]
+** [[https://www.drupal.org/node/2718253][Upload progress on php7]]
+   #+BEGIN_SRC sh
+   git clone https://github.com/Jan-E/uploadprogress
+   cd uploadprogres
+   phpize
+   ./configure
+   make
+   sudo make install
+   sudo touch /etc/php/7.0/mods-available/uploadprogress.ini
+   echo "extension=uploadprogress.so" > /etc/php/7.0/mods-available/uploadprogress.ini
+   sudo phpenmod uploadprogress
+   sudo service apache2 restart
+   #+END_SRC
+
 * nginx
 ** virtual hosts
 *** TODO
