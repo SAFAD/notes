@@ -284,17 +284,19 @@ ini_set('display_errors',1);
 error_reporting(-1);
 #+END_SRC php
 
-* drupal7
-** How to fix "The following module is missing from the file system..." warning messages
+* drupal-7.x
+** how to fix "The following module is missing from the file system..." warning messages
 *** Clearing the cache
    - Delete the modules from the database:
      ~drush sql-query "DELETE from system where name='name' AND type = 'module';"~
    - Clear the cache with drush:
      ~drush cc all~
 *** Using  [[https://www.drupal.org/project/module_missing_message_fixer][Module Missing Message Fixer]]
-** Drupal debuging
+** drupal debuging
 *** [[https://www.drupal.org/project/devel][Devel]]
-** [[https://www.drupal.org/node/2718253][Upload progress on php7]]
+****  disable and enable a module
+      ~drush dre <module-name> -y~
+** [[https://www.drupal.org/node/2718253][upload progress on php7]]
    #+BEGIN_SRC sh
    git clone https://github.com/Jan-E/uploadprogress
    cd uploadprogres
@@ -307,7 +309,10 @@ error_reporting(-1);
    sudo phpenmod uploadprogress
    sudo service apache2 restart
    #+END_SRC
-
+** [[https://api.drupal.org/api/drupal/modules%2521system%2521system.api.php/function/hook_menu/7.x][hook_menu]]
+** [[https://api.drupal.org/api/drupal/modules!system!system.admin.inc/function/system_admin_menu_block_page/7.x][system_admin_menu_block_page]]
+** rebuild menu system
+   ~drush eval 'menu_rebuild();'~
 * nginx
 ** virtual hosts
 *** TODO
