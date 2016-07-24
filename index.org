@@ -208,6 +208,9 @@ $mathpzc{uppercase or lowercase characters}$
 #+BEGIN_SRC tex
 \usepackage[justification=centering]{caption}
 #+END_SRC
+* linux
+** copy with preserve permissions
+   ~cp -p~
 * ubuntu
 ** public ip
    ~curl ipecho.net/plain ; echo~
@@ -285,17 +288,29 @@ error_reporting(-1);
 #+END_SRC php
 
 * drupal-7.x
-** how to fix "The following module is missing from the file system..." warning messages
-*** Clearing the cache
-   - Delete the modules from the database:
-     ~drush sql-query "DELETE from system where name='name' AND type = 'module';"~
-   - Clear the cache with drush:
-     ~drush cc all~
+** basic
+   - hooks are internal events.
+*** event/hook/trigger
+    - hook is an action (function) executed when an internal event
+      fired.
+    - action is a something that drupal does.
+    - trigger is a combination of an hook with an operation.
+    - traigger = <action, hook>
+    - we can assigne a trigger name to a hook function.
+    - action is an abstraction of a hook used by trigger module.
+    - we use ~hook_action_info()~ to define an action, or *hook to
+      define a hook*.
+    - we have simple actions and advanced(configurable) ones.
+    - we can create simple actions by instancing an advanced one.
+** clearing the cache
+  - clear the cache with drush: ~drush cc all~
+** how to fix "The following module is missing from the file system"
 *** Using  [[https://www.drupal.org/project/module_missing_message_fixer][Module Missing Message Fixer]]
 ** drupal debuging
-*** [[https://www.drupal.org/project/devel][Devel]]
-****  disable and enable a module
+*** [[https://www.drupal.org/project/devel][devel]]
+**** disable and enable a module
       ~drush dre <module-name> -y~
+**** use ~dvm~ instead of ~dpm~
 ** [[https://www.drupal.org/node/2718253][upload progress on php7]]
    #+BEGIN_SRC sh
    git clone https://github.com/Jan-E/uploadprogress
@@ -309,13 +324,15 @@ error_reporting(-1);
    sudo phpenmod uploadprogress
    sudo service apache2 restart
    #+END_SRC
-** [[https://api.drupal.org/api/drupal/modules%2521system%2521system.api.php/function/hook_menu/7.x][hook_menu]]
-** [[https://api.drupal.org/api/drupal/modules!system!system.admin.inc/function/system_admin_menu_block_page/7.x][system_admin_menu_block_page]]
 ** rebuild menu system
    ~drush eval 'menu_rebuild();'~
+** drush get variable
+   - get all variables: ~drush vget~
+   - get a ~<variable>~: ~drush vget <variable>~
+** drush remove orphaned action
+   ~drush php-eval "actions_synchronize(TRUE);~
 * nginx
 ** virtual hosts
-*** TODO
 * apache
 ** htacess
 * wordpress
