@@ -40,6 +40,8 @@
 - [[http://christiantietze.de/posts/2014/07/knowledge-cycle-efficiently-organize-writing-projects/][use a Short Knowledge Cycle to Keep Your Cool]]
 - [[https://gist.github.com/endolith/157796][emoji]]
 - [[http://www.spreeder.com/][spreeder]]
+* convert png/gif to ico ([[http://stackoverflow.com/questions/3185677/converting-gifs-pngs-and-jpgs-to-ico-files-using-imagemagick][link]])
+  ~/usr/bin/convert -resize x16 -gravity center -crop 16x16+0+0 input.png -flatten -colors 256 -background transparent output/favicon.ico~
 * maven
 ** custome jar name
 #+BEGIN_SRC nxml
@@ -211,6 +213,8 @@ $mathpzc{uppercase or lowercase characters}$
 * linux
 ** copy with preserve permissions
    ~cp -p~
+** (ssh) copy files from local to remote
+   ~scp /path/to/file username@host:/path/to/destination~
 * ubuntu
 ** public ip
    ~curl ipecho.net/plain ; echo~
@@ -331,6 +335,8 @@ error_reporting(-1);
    - get a ~<variable>~: ~drush vget <variable>~
 ** drush remove orphaned action
    ~drush php-eval "actions_synchronize(TRUE);~
+** permissions problems on Centos/SELinux
+   ~sudo chcon -R -t httpd_sys_content_rw_t /var/www/html/drupal/sites/~
 * nginx
 ** virtual hosts
 * apache
