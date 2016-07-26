@@ -229,6 +229,9 @@ $mathpzc{uppercase or lowercase characters}$
 
 - ~$ sudo usermod -aG docker $USER~
 - ~$ newgrp docker~
+* centos
+** check centos version
+   ~cat /etc/centos-release~
 * docker
 ** stop all containers
    ~$ docker stop $(docker ps -a -q)~
