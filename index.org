@@ -215,6 +215,8 @@ $mathpzc{uppercase or lowercase characters}$
    ~cp -p~
 ** (ssh) copy files from local to remote
    ~scp /path/to/file username@host:/path/to/destination~
+** add user to a group
+   ~sudo adduser <username> www-data~
 * ubuntu
 ** public ip
    ~curl ipecho.net/plain ; echo~
@@ -340,6 +342,7 @@ error_reporting(-1);
    ~drush php-eval "actions_synchronize(TRUE);~
 ** permissions problems on Centos/SELinux
    ~sudo chcon -R -t httpd_sys_content_rw_t /var/www/html/drupal/sites/~
+** modules you need
 * nginx
 ** virtual hosts
 * apache
@@ -373,6 +376,5 @@ find . -type f -exec chmod 644 {} \;  # Change file permissions rw-r--r--
 ** [[https://slack-files.com/T03JT4FC2-F151AAF7A-13fe6f98da][You (probably) don't need a JavaScript framework]]
 ** [[http://wtfhtmlcss.com/][WTF, HTML and CSS?]]
 ** [[http://tympanus.net/codrops/][Codrops]]
-* stackoverflow-tips
-** <kbd>[**GoPlay**](http://play.golang.org/)</kbd>
-a link to goplay example
+* good reads
+** TODO [[http://gabordemooij.com/index.php?p%3D%252Fmanifest][Anti Mediocracy Manifesto for Software Development]]
