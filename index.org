@@ -343,6 +343,8 @@ error_reporting(-1);
 ** permissions problems on Centos/SELinux
    ~sudo chcon -R -t httpd_sys_content_rw_t /var/www/html/drupal/sites/~
 ** modules you need
+** reading
+*** [[https://www.drupal.org/node/803746][Building a Drupal site with Git]]
 * nginx
 ** virtual hosts
 * apache
@@ -370,6 +372,16 @@ find . -type f -exec chmod 644 {} \;  # Change file permissions rw-r--r--
 #+END_SRC
 ** On-Scroll animated header
 ** BEM
+** global box-sizing reset
+#+BEGIN_SRC css
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+#+END_SRC css
+
 * front-end reads
 ** [[https://developer.yahoo.com/performance/rules.html][Best Practices for Speeding Up Your Web Site]]
 ** [[http://complexspiral.com/publications/containing-floats/][Eric A.Meyer: Containing Floats]]
