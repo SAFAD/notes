@@ -381,7 +381,11 @@ html {
   box-sizing: inherit;
 }
 #+END_SRC css
-
+** backgound hero image
+#+BEGIN_SRC css
+background: url('bg-image.jpg') no-repeat center center;
+background-size: cover;
+#+END_SRC css
 * front-end reads
 ** [[https://developer.yahoo.com/performance/rules.html][Best Practices for Speeding Up Your Web Site]]
 ** [[http://complexspiral.com/publications/containing-floats/][Eric A.Meyer: Containing Floats]]
