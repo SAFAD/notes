@@ -387,10 +387,12 @@ background: url('bg-image.jpg') no-repeat center center;
 background-size: cover;
 #+END_SRC css
 * front-end reads
-** [[https://developer.yahoo.com/performance/rules.html][Best Practices for Speeding Up Your Web Site]]
-** [[http://complexspiral.com/publications/containing-floats/][Eric A.Meyer: Containing Floats]]
-** [[https://slack-files.com/T03JT4FC2-F151AAF7A-13fe6f98da][You (probably) don't need a JavaScript framework]]
-** [[http://wtfhtmlcss.com/][WTF, HTML and CSS?]]
-** [[http://tympanus.net/codrops/][Codrops]]
+** TODO [[http://tympanus.net/codrops/][Codrops]]
+** TODO [[https://developer.yahoo.com/performance/rules.html][Best Practices for Speeding Up Your Web Site]]
+** TODO [[http://complexspiral.com/publications/containing-floats/][Eric A.Meyer: Containing Floats]]
+** TODO [[https://slack-files.com/T03JT4FC2-F151AAF7A-13fe6f98da][You (probably) don't need a JavaScript framework]]
+** TODO [[http://wtfhtmlcss.com/][WTF, HTML and CSS?]]
+** TODO [[http://thenewcode.com/739/Creating-Responsive-Hero-Text-With-vw-Units][Creating Responsive Hero Text With vw Units]]
+** TODO [[http://taligarsiel.com/Projects/howbrowserswork1.htm][How browsers work]]
 * good reads
 ** TODO [[http://gabordemooij.com/index.php?p%3D%252Fmanifest][Anti Mediocracy Manifesto for Software Development]]
