@@ -40,8 +40,6 @@
 - [[http://christiantietze.de/posts/2014/07/knowledge-cycle-efficiently-organize-writing-projects/][use a Short Knowledge Cycle to Keep Your Cool]]
 - [[https://gist.github.com/endolith/157796][emoji]]
 - [[http://www.spreeder.com/][spreeder]]
-* convert png/gif to ico ([[http://stackoverflow.com/questions/3185677/converting-gifs-pngs-and-jpgs-to-ico-files-using-imagemagick][link]])
-  ~/usr/bin/convert -resize x16 -gravity center -crop 16x16+0+0 input.png -flatten -colors 256 -background transparent output/favicon.ico~
 * maven
 ** custome jar name
 #+BEGIN_SRC nxml
@@ -110,7 +108,6 @@ GULP?= $(BIN)/gulp
 bundle:
     $(GULP) bundle
 #+END_SRC
-
 * emacs
 ** auctex
 *** [[http://www.gnu.org/software/auctex/manual/auctex.html#Folding][floding]]
@@ -217,6 +214,10 @@ $mathpzc{uppercase or lowercase characters}$
    ~scp /path/to/file username@host:/path/to/destination~
 ** add user to a group
    ~sudo adduser <username> www-data~
+** convert png/gif to ico ([[http://stackoverflow.com/questions/3185677/converting-gifs-pngs-and-jpgs-to-ico-files-using-imagemagick][link]])
+   ~/usr/bin/convert -resize x16 -gravity center -crop 16x16+0+0 input.png -flatten -colors 256 -background transparent output/favicon.ico~
+** blur image
+   ~convert -blur 4x4 image.jpg image-blur.jpg~
 * ubuntu
 ** public ip
    ~curl ipecho.net/plain ; echo~
