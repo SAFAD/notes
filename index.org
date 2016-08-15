@@ -387,6 +387,7 @@ html {
 background: url('bg-image.jpg') no-repeat center center;
 background-size: cover;
 #+END_SRC css
+** [[https://css-tricks.com/centering-in-the-unknown/][centering-in-the-unknown]]
 * front-end reads
 ** TODO [[http://tympanus.net/codrops/][Codrops]]
 ** TODO [[https://developer.yahoo.com/performance/rules.html][Best Practices for Speeding Up Your Web Site]]
@@ -395,5 +396,6 @@ background-size: cover;
 ** TODO [[http://wtfhtmlcss.com/][WTF, HTML and CSS?]]
 ** TODO [[http://thenewcode.com/739/Creating-Responsive-Hero-Text-With-vw-Units][Creating Responsive Hero Text With vw Units]]
 ** TODO [[http://taligarsiel.com/Projects/howbrowserswork1.htm][How browsers work]]
+* yeoman
 * good reads
 ** TODO [[http://gabordemooij.com/index.php?p%3D%252Fmanifest][Anti Mediocracy Manifesto for Software Development]]
