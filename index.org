@@ -1,4 +1,5 @@
 #+TITLE: Some useful links, quick tips and tricks
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1">
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
 * crypto
 ** misc
