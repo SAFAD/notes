@@ -1,0 +1,85 @@
+@font-face {
+    font-family: Inconsolata-Regular;
+    src: url(./fonts/Inconsolata-Regular.ttf);
+}
+
+@font-face {
+    font-family: Inconsolata-Bold;
+    src: url(./fonts/Inconsolata-Bold.ttf);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Helvetica;
+    width: 80%;
+    margin: 2rem auto;
+    padding: 1rem;
+    line-height: 1.5;
+    background-color: rgba(238,238,238, 0.3);
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-family: Inconsolata-Bold;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
+h2 {
+    background-color: #FFF59D;
+    margin-top: 4em;
+}
+
+#table-of-contents h2 {
+    background-color: transparent;
+    margin-top: 0;
+}
+
+h1 {
+    color: #111;
+    font-size: 4em;
+    line-height: 1.2;
+}
+
+h2 {
+    color: #222;
+    font-size: 2em;
+}
+
+h3 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+h4, h5, h6, h7 {
+    color: #444;
+    font-size: 1.2em;
+}
+
+.section-number-2, .section-number-3 {
+    font-size: 16px;
+}
+
+code, .src {
+    font-family: Inconsolata-Regular;
+    color: #444;
+}
+
+
+a {
+    color: #0D47A1;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+/

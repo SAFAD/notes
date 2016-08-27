@@ -1,0 +1,409 @@
+#+TITLE: Some useful links, quick tips and tricks
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+* crypto
+** misc
+- [[http://www.cs.bham.ac.uk/~mdr/teaching/modules04/security/lectures/hash.html][One-way secure hash function]]
+- [[https://crackstation.net/hashing-security.htm][Salted Password Hashing - Doing it Right]]
+** stackveflow
+-  [[http://security.stackexchange.com/questions/4781/do-any-security-experts-recommend-bcrypt-for-password-storage/6415#6415][Do any security experts recommend bcrypt for password storage?]]
+-  [[http://security.stackexchange.com/questions/11717/why-are-hash-functions-one-way-if-i-know-the-algorithm-why-cant-i-calculate-t][Why are hash functions one way? If I know the algorithm, why can't I calculate the input from it?]]
+-  [[http://stackoverflow.com/questions/2112685/how-do-one-way-hash-functions-work][How do one-way hash functions work?]]
+-  [[http://security.stackexchange.com/questions/5668/where-can-i-learn-cryptography-cryptanalysis-the-hard-way-without-going-to-scho][Where can I learn cryptography/cryptanalysis the hard way, without going to school ? Any good book?]]
+-  [[http://stackoverflow.com/questions/549/the-definitive-guide-to-form-based-website-authentication][The definitive guide to form based website authentication]]
+** coding Horror
+-  [[http://blog.codinghorror.com/youre-probably-storing-passwords-incorrectly/][You're Probably Storing Passwords Incorrectly]]
+-  [[http://blog.codinghorror.com/speed-hashing/][Speed Hashing]]
+-  [[http://blog.codinghorror.com/rainbow-hash-cracking/][Rainbow Hash Cracking]]
+-  [[http://www.securityfocus.com/blogs/262][Enough With The Rainbow Tables: What You Need To Know About Secure Password Schemes]]
+-  [[http://blog.codinghorror.com/dictionary-attacks-101/][Dictionary Attacks 101]]
+* git
+** links
+- [[http://stackoverflow.com/questions/5299526/github-commiting-push-gist][github commiting (push) gist]]
+- [[http://wildlyinaccurate.com/a-hackers-guide-to-git/][A Hacker's Guide to Git]]
+- [[https://codewords.recurse.com/issues/two/git-from-the-inside-out][Git from the inside out]]
+** [[http://stackoverflow.com/questions/2003505/delete-a-git-branch-both-locally-and-remotely][delete a Git branch both locally and remotely]]
+- ~git push origin --delete <branchName>~
+** delete a remote tag
+- ~git tag -d v0.1~
+- ~git push origin :refs/tags/v0.1~
+- ~git push --delete origin v0.1~
+** reset the last commit, but keep changes
+- ~git reset --soft HEAD^~
+** reset the last commit, throw away your changes
+- ~git reset --hard HEAD^~
+** force git push master to origin
+- ~git push origin +master~
+** update a file form a branch (master for example)
+- ~git checkout master -- file.txt~
+* misc
+- [[http://christiantietze.de/posts/2014/07/knowledge-cycle-efficiently-organize-writing-projects/][use a Short Knowledge Cycle to Keep Your Cool]]
+- [[https://gist.github.com/endolith/157796][emoji]]
+- [[http://www.spreeder.com/][spreeder]]
+* maven
+** custome jar name
+#+BEGIN_SRC nxml
+<project>
+    <name>jaxrs-ember</name>
+</project>
+#+END_SRC
+** create one fat jar for a jersey 2 application (solution found at [[http://stackoverflow.com/questions/12611213/jersey-exception-only-thrown-when-depencencies-assembled-into-a-single-jar][Jersey exception only thrown when depencencies assembled into a single jar]])
+#+BEGIN_SRC nxml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-shade-plugin</artifactId>
+    <version>2.3</version>
+    <executions>
+        <execution>
+            <phase>package</phase>
+                <goals>
+                    <goal>shade</goal>
+                </goals>
+            <configuration>
+                <transformers>
+                    <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
+                    <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                        <mainClass>${mainClass}</mainClass>
+                    </transformer>
+                </transformers>
+                <filters>
+                    <filter>
+                        <artifact>*:*</artifact>
+                        <excludes>
+                            <exclude>META-INF/*.SF</exclude>
+                            <exclude>META-INF/*.DSA</exclude>
+                            <exclude>META-INF/*.RSA</exclude>
+                        </excludes>
+                    </filter>
+                </filters>
+                <finalName>${fat-jar-name}</finalName>\
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+#+END_SRC
+** renanme a jar-with-dependencies file created by maven-assembly-plugin
+   add this two elements to the maven-assembly-plugin configuration
+   element:
+#+BEGIN_SRC nxml
+<configuration>
+    ...
+    <finalName>fat-jar-name</finalName>
+    <appendAssemblyId>false</appendAssemblyId>
+</configuration>
+#+END_SRC
+** [[https://maven.apache.org/plugins/maven-remote-resources-plugin/examples/sharing-resources.html][sharing resources]]
+** download javadocs
+   ~mvn dependency:resolve -Dclassifier=javadoc~
+* gnu make
+** links
+- [[http://nuclear.mutantstargoat.com/articles/make/][Practical Makefiles, by example]]
+- [[http://stackoverflow.com/questions/2145590/what-is-the-purpose-of-phony-in-a-makefile][What is the purpose of .PHNY in a makefile?]]
+** [[https://segment.com/blog/how-we-use-make/][make for the frontend (or how segment.io uses make)]]
+#+BEGIN_SRC
+.PHONY: bundle
+BIN=./node_modules/.bin
+GULP?= $(BIN)/gulp
+
+bundle:
+    $(GULP) bundle
+#+END_SRC
+* emacs
+** auctex
+*** [[http://www.gnu.org/software/auctex/manual/auctex.html#Folding][floding]]
+- Command: TeX-fold-comment
+  ~(C-c C-o C-c)~ Hide the comment point is located on.
+
+- Command: TeX-fold-region
+  ~(C-c C-o C-r)~  Hide all configured macros in the marked region.
+
+- Command: TeX-fold-clearout-region
+  ~(C-c C-o r)~ Permanently unfold all macros and environments in the marked region.
+** python
+-  [[http://www.jesshamrick.com/2012/09/18/emacs-as-a-python-ide/][Emacs as a Python IDE]]
+** dired
+- [[http://stackoverflow.com/questions/2858097/cutomizing-dired][humanize file sizes]]
+~C-u s~ and add h to the args.
+** erase-buffer
+~M-x erase-buffer~
+* python
+- [[https://districtdatalabs.silvrback.com/how-to-develop-quality-python-code][How to Develop Quality Python Code]]
+* npm
+** using [[https://github.com/Qard/onchange][onChange]] for watching files
+* latex
+** color
+   \usepackage{color}
+     {\color{red}
+     red text.
+   }
+** [[http://tex.stackexchange.com/questions/10372/in-line-verb-overfull-hbox-problem][In-line \verb — overfull hbox problem]]
+always use ~\texttt~ or ~\ttfamily~ for longer text instead of
+~\verb||~.
+** caption package
+customize figure and table names in captions:
+- ~\captionsetup[figure]{name=Figure.}~
+- ~\captionsetup[table]{name=Table.}~
+** style itemize
+#+BEGIN_SRC tex
+\begin{itemize}
+\renewcommand\labelitemi{--}
+\item asdasd
+\item dsfsdf
+\end{itemize
+#+END_SRC
+** [[http://tex.stackexchange.com/questions/23403/how-can-i-produce-an-unnumbered-chapter-for-the-introduction][How can I produce an unnumbered chapter for the introduction?]]
+   \chapter*{introduction}
+   \addcontentsline{toc}{chapter}{Introduction} \markboth{INTRODUCTION}{}
+** rsfs fonts for math
+- install the package via: ~tlmgr install rsfs~.
+- import the package in the preamble:
+#+BEGIN_SRC tex
+\usepackage{mathrsfs}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+#+END_SRC
+- use it!
+#+BEGIN_SRC tex
+$mathpzc{uppercase or lowercase characters}$
+#+END_SRC
+** [[http://ctan.org/pkg/enumitem][enumitem]]: Control layout of itemize, enumerate, description
+   Add ~\usepackage{enumitem}~ to enable better default items
+   indention.
+** arabic typesetting
+#+BEGIN_SRC tex
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{arabtex} \usepackage{utf8}
+
+\begin{document}
+\setcode{utf8}
+\begin{arabtext}
+ السَلامُ عَليكم ورَحمةُ الله وبَركاته \end{arabtext} \end{document}
+#+END_SRC
+** inline enumerate items with a modified label
+- a [[http://tex.stackexchange.com/questions/103086/customizing-inline-enumerate-with-enumitem-still-not-working][link]] to the source.
+- use ~enumitem~ package with ~inline~ option to enable inlined
+  enumeration command (~enumerate*~).
+#+BEGIN_SRC tex
+\usepackage[inline]{enumitem}
+#+END_SRC
+- define `inlinelist` command:
+#+BEGIN_SRC tex
+\newlist{inlinelist}{enumerate*}{1}
+\setlist*[inlinelist,1]{%
+  label=(\roman*),
+}
+#+END_SRC
+** center figure that is wider than \textwidth
+- [[http://tex.stackexchange.com/questions/16582/center-figure-that-is-wider-than-textwidth][tex.stackexchange]]
+#+BEGIN_SRC tex
+%% use the package in the main file
+\usepackage[export]{adjustbox}
+
+%% enable centre option
+\includegraphics[width=1.2\textwidth, center]{figure.eps}
+#+END_SRC
+** centering caption of a figure
+- [[http://tex.stackexchange.com/questions/54475/centering-caption-of-a-figure][tex.stackexchange]]
+#+BEGIN_SRC tex
+\usepackage[justification=centering]{caption}
+#+END_SRC
+* linux
+** copy with preserve permissions
+   ~cp -p~
+** (ssh) copy files from local to remote
+   ~scp /path/to/file username@host:/path/to/destination~
+** add user to a group
+   ~sudo adduser <username> www-data~
+** convert png/gif to ico ([[http://stackoverflow.com/questions/3185677/converting-gifs-pngs-and-jpgs-to-ico-files-using-imagemagick][link]])
+   ~/usr/bin/convert -resize x16 -gravity center -crop 16x16+0+0 input.png -flatten -colors 256 -background transparent output/favicon.ico~
+** blur image
+   ~convert -blur 4x4 image.jpg image-blur.jpg~
+* ubuntu
+** public ip
+   ~curl ipecho.net/plain ; echo~
+** finding the PID of the process using a specific port?
+   ~sudo netstat -nlp | grep 80~
+** newgrp
+   ~newgrp~ is used to change the current group ~ID~ during a login
+   session, it changes the current real group ~ID~ to the named group.
+
+   I used this after adding my user name to the ~docker~ group (during
+   the ~docker~ post-installation):
+
+- ~$ sudo usermod -aG docker $USER~
+- ~$ newgrp docker~
+* centos
+** check centos version
+   ~cat /etc/centos-release~
+* docker
+** stop all containers
+   ~$ docker stop $(docker ps -a -q)~
+** remove all dangling images (untaged images)
+   ~$docker rmi -f $(docker images -f "dangling=true" -q)~
+* php
+** install nginx/php7/mysql on ubuntu 14.04 LTS
+*** install nginx
+#+BEGIN_SRC sh
+sudo apt-get install nginx
+#+END_SRC
+*** install php7
+#+BEGIN_SRC sh
+sudo add-apt-repository ppa:ondrej/php
+
+sudo apt-get install -y language-pack-en-base
+
+sudo LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php
+
+sudo apt-get install php7.0-fpm php7.0-sqlite php7.0-mysql
+#+END_SRC
+
+*** restart nginx and php7
+#+BEGIN_SRC sh
+sudo service nginx restart
+sudo service php7.0-fpm restart
+#+END_SRC
+*** configuration file example
+- create a ~dev.conf~ file at ~/etc/nginx/sites-available~:
+
+#+BEGIN_SRC sh
+server {
+    listen 3001 default_server;
+    listen [::]:3001 default_server ipv6only=on;
+
+    root /var/www/dev;
+    index index.php;
+
+    server_name localhost;
+
+    location / {
+    ;;    rewrite ^/$ /kickstart/ break;
+    }
+
+    location ~ \.php$ {
+        try_files $uri =404;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+}
+#+END_SRC
+
+- enable ~dev.conf~ configuration by:
+~ln -s /etc/nginx/sites-available/dev.conf /etc/nginx/sites-enables/dev.conf~
+** get error messages in php
+
+#+BEGIN_SRC php
+ini_set('display_startup_errors',1);
+ini_set('display_errors',1);
+error_reporting(-1);
+#+END_SRC
+
+* drupal-7.x
+** basic
+   - hooks are internal events.
+*** event/hook/trigger
+    - hook is an action (function) executed when an internal event
+      fired.
+    - action is a something that drupal does.
+    - trigger is a combination of an hook with an operation.
+    - traigger = <action, hook>
+    - we can assigne a trigger name to a hook function.
+    - action is an abstraction of a hook used by trigger module.
+    - we use ~hook_action_info()~ to define an action, or *hook to
+      define a hook*.
+    - we have simple actions and advanced(configurable) ones.
+    - we can create simple actions by instancing an advanced one.
+** clearing the cache
+  - clear the cache with drush: ~drush cc all~
+** how to fix "The following module is missing from the file system"
+*** Using  [[https://www.drupal.org/project/module_missing_message_fixer][Module Missing Message Fixer]]
+** drupal debuging
+*** [[https://www.drupal.org/project/devel][devel]]
+**** disable and enable a module
+      ~drush dre <module-name> -y~
+**** use ~dvm~ instead of ~dpm~
+** [[https://www.drupal.org/node/2718253][upload progress on php7]]
+   #+BEGIN_SRC sh
+   git clone https://github.com/Jan-E/uploadprogress
+   cd uploadprogres
+   phpize
+   ./configure
+   make
+   sudo make install
+   sudo touch /etc/php/7.0/mods-available/uploadprogress.ini
+   echo "extension=uploadprogress.so" > /etc/php/7.0/mods-available/uploadprogress.ini
+   sudo phpenmod uploadprogress
+   sudo service apache2 restart
+   #+END_SRC
+** rebuild menu system
+   #+BEGIN_SRC sh
+   ~drush eval "menu_rebuild();"~
+   #+END_SRC
+** drush get variable
+   - get all variables: ~drush vget~
+   - get a ~<variable>~: ~drush vget <variable>~
+** drush remove orphaned action
+   ~drush php-eval "actions_synchronize(TRUE);~
+** permissions problems on Centos/SELinux
+   ~sudo chcon -R -t httpd_sys_content_rw_t /var/www/html/drupal/sites/~
+** modules you need
+** reading
+*** [[https://www.drupal.org/node/803746][Building a Drupal site with Git]]
+* nginx
+** virtual hosts
+* apache
+** htacess
+* wordpress
+** proper wordpress filesystem permissions and ownerships (chmod)
+- [[http://stackoverflow.com/questions/18352682/correct-file-permissions-for-wordpress][stackoverflow: Correct file permissions for WordPress]]
+#+BEGIN_SRC sh
+chown www-data:www-data -R *          # Let apache be owner
+find . -type d -exec chmod 755 {} \;  # Change directory permissions rwxr-xr-x
+find . -type f -exec chmod 644 {} \;  # Change file permissions rw-r--r--
+#+END_SRC
+* css
+** How to center absolute element in div?
+- [[http://stackoverflow.com/questions/1776915/how-to-center-absolute-element-in-div][stackoverflow: How to center absolute element in div?]]
+
+#+BEGIN_SRC css
+#content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+#+END_SRC
+** On-Scroll animated header
+** BEM
+** global box-sizing reset
+
+#+BEGIN_SRC css
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+#+END_SRC
+
+** backgound hero image
+
+#+BEGIN_SRC css
+background: url('bg-image.jpg') no-repeat center center;
+background-size: cover;
+#+END_SRC
+** [[https://css-tricks.com/centering-in-the-unknown/][centering-in-the-unknown]]
+* front-end reads
+** TODO [[http://tympanus.net/codrops/][Codrops]]
+** TODO [[https://developer.yahoo.com/performance/rules.html][Best Practices for Speeding Up Your Web Site]]
+** TODO [[http://complexspiral.com/publications/containing-floats/][Eric A.Meyer: Containing Floats]]
+** TODO [[https://slack-files.com/T03JT4FC2-F151AAF7A-13fe6f98da][You (probably) don't need a JavaScript framework]]
+** TODO [[http://wtfhtmlcss.com/][WTF, HTML and CSS?]]
+** TODO [[http://thenewcode.com/739/Creating-Responsive-Hero-Text-With-vw-Units][Creating Responsive Hero Text With vw Units]]
+** TODO [[http://taligarsiel.com/Projects/howbrowserswork1.htm][How browsers work]]
+* yeoman
+* good reads
+** TODO [[http://gabordemooij.com/index.php?p%3D%252Fmanifest][Anti Mediocracy Manifesto for Software Development]]

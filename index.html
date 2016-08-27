@@ -1,0 +1,1363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Some useful links, quick tips and tricks</title>
+<!-- 2016-08-27 س 23:51 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="atlas" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Some useful links, quick tips and tricks</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. crypto</a>
+<ul>
+<li><a href="#sec-1-1">1.1. misc</a></li>
+<li><a href="#sec-1-2">1.2. stackveflow</a></li>
+<li><a href="#sec-1-3">1.3. coding Horror</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. git</a>
+<ul>
+<li><a href="#sec-2-1">2.1. links</a></li>
+<li><a href="#sec-2-2">2.2. delete a Git branch both locally and remotely</a></li>
+<li><a href="#sec-2-3">2.3. delete a remote tag</a></li>
+<li><a href="#sec-2-4">2.4. reset the last commit, but keep changes</a></li>
+<li><a href="#sec-2-5">2.5. reset the last commit, throw away your changes</a></li>
+<li><a href="#sec-2-6">2.6. force git push master to origin</a></li>
+<li><a href="#sec-2-7">2.7. update a file form a branch (master for example)</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. misc</a></li>
+<li><a href="#sec-4">4. maven</a>
+<ul>
+<li><a href="#sec-4-1">4.1. custome jar name</a></li>
+<li><a href="#sec-4-2">4.2. create one fat jar for a jersey 2 application (solution found at Jersey exception only thrown when depencencies assembled into a single jar)</a></li>
+<li><a href="#sec-4-3">4.3. renanme a jar-with-dependencies file created by maven-assembly-plugin</a></li>
+<li><a href="#sec-4-4">4.4. sharing resources</a></li>
+<li><a href="#sec-4-5">4.5. download javadocs</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5. gnu make</a>
+<ul>
+<li><a href="#sec-5-1">5.1. links</a></li>
+<li><a href="#sec-5-2">5.2. make for the frontend (or how segment.io uses make)</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6. emacs</a>
+<ul>
+<li><a href="#sec-6-1">6.1. auctex</a>
+<ul>
+<li><a href="#sec-6-1-1">6.1.1. floding</a></li>
+</ul>
+</li>
+<li><a href="#sec-6-2">6.2. python</a></li>
+<li><a href="#sec-6-3">6.3. dired</a></li>
+<li><a href="#sec-6-4">6.4. erase-buffer</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7. python</a></li>
+<li><a href="#sec-8">8. npm</a>
+<ul>
+<li><a href="#sec-8-1">8.1. using onChange for watching files</a></li>
+</ul>
+</li>
+<li><a href="#sec-9">9. latex</a>
+<ul>
+<li><a href="#sec-9-1">9.1. color</a></li>
+<li><a href="#sec-9-2">9.2. In-line \verb — overfull hbox problem</a></li>
+<li><a href="#sec-9-3">9.3. caption package</a></li>
+<li><a href="#sec-9-4">9.4. style itemize</a></li>
+<li><a href="#sec-9-5">9.5. How can I produce an unnumbered chapter for the introduction?</a></li>
+<li><a href="#sec-9-6">9.6. rsfs fonts for math</a></li>
+<li><a href="#sec-9-7">9.7. enumitem: Control layout of itemize, enumerate, description</a></li>
+<li><a href="#sec-9-8">9.8. arabic typesetting</a></li>
+<li><a href="#sec-9-9">9.9. inline enumerate items with a modified label</a></li>
+<li><a href="#sec-9-10">9.10. center figure that is wider than \textwidth</a></li>
+<li><a href="#sec-9-11">9.11. centering caption of a figure</a></li>
+</ul>
+</li>
+<li><a href="#sec-10">10. linux</a>
+<ul>
+<li><a href="#sec-10-1">10.1. copy with preserve permissions</a></li>
+<li><a href="#sec-10-2">10.2. (ssh) copy files from local to remote</a></li>
+<li><a href="#sec-10-3">10.3. add user to a group</a></li>
+<li><a href="#sec-10-4">10.4. convert png/gif to ico (link)</a></li>
+<li><a href="#sec-10-5">10.5. blur image</a></li>
+</ul>
+</li>
+<li><a href="#sec-11">11. ubuntu</a>
+<ul>
+<li><a href="#sec-11-1">11.1. public ip</a></li>
+<li><a href="#sec-11-2">11.2. finding the PID of the process using a specific port?</a></li>
+<li><a href="#sec-11-3">11.3. newgrp</a></li>
+</ul>
+</li>
+<li><a href="#sec-12">12. centos</a>
+<ul>
+<li><a href="#sec-12-1">12.1. check centos version</a></li>
+</ul>
+</li>
+<li><a href="#sec-13">13. docker</a>
+<ul>
+<li><a href="#sec-13-1">13.1. stop all containers</a></li>
+<li><a href="#sec-13-2">13.2. remove all dangling images (untaged images)</a></li>
+</ul>
+</li>
+<li><a href="#sec-14">14. php</a>
+<ul>
+<li><a href="#sec-14-1">14.1. install nginx/php7/mysql on ubuntu 14.04 LTS</a>
+<ul>
+<li><a href="#sec-14-1-1">14.1.1. install nginx</a></li>
+<li><a href="#sec-14-1-2">14.1.2. install php7</a></li>
+<li><a href="#sec-14-1-3">14.1.3. restart nginx and php7</a></li>
+<li><a href="#sec-14-1-4">14.1.4. configuration file example</a></li>
+</ul>
+</li>
+<li><a href="#sec-14-2">14.2. get error messages in php</a></li>
+</ul>
+</li>
+<li><a href="#sec-15">15. drupal-7.x</a>
+<ul>
+<li><a href="#sec-15-1">15.1. basic</a>
+<ul>
+<li><a href="#sec-15-1-1">15.1.1. event/hook/trigger</a></li>
+</ul>
+</li>
+<li><a href="#sec-15-2">15.2. clearing the cache</a></li>
+<li><a href="#sec-15-3">15.3. how to fix "The following module is missing from the file system"</a>
+<ul>
+<li><a href="#sec-15-3-1">15.3.1. Using  Module Missing Message Fixer</a></li>
+</ul>
+</li>
+<li><a href="#sec-15-4">15.4. drupal debuging</a>
+<ul>
+<li><a href="#sec-15-4-1">15.4.1. devel</a></li>
+</ul>
+</li>
+<li><a href="#sec-15-5">15.5. upload progress on php7</a></li>
+<li><a href="#sec-15-6">15.6. rebuild menu system</a></li>
+<li><a href="#sec-15-7">15.7. drush get variable</a></li>
+<li><a href="#sec-15-8">15.8. drush remove orphaned action</a></li>
+<li><a href="#sec-15-9">15.9. permissions problems on Centos/SELinux</a></li>
+<li><a href="#sec-15-10">15.10. modules you need</a></li>
+<li><a href="#sec-15-11">15.11. reading</a>
+<ul>
+<li><a href="#sec-15-11-1">15.11.1. Building a Drupal site with Git</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-16">16. nginx</a>
+<ul>
+<li><a href="#sec-16-1">16.1. virtual hosts</a></li>
+</ul>
+</li>
+<li><a href="#sec-17">17. apache</a>
+<ul>
+<li><a href="#sec-17-1">17.1. htacess</a></li>
+</ul>
+</li>
+<li><a href="#sec-18">18. wordpress</a>
+<ul>
+<li><a href="#sec-18-1">18.1. proper wordpress filesystem permissions and ownerships (chmod)</a></li>
+</ul>
+</li>
+<li><a href="#sec-19">19. css</a>
+<ul>
+<li><a href="#sec-19-1">19.1. How to center absolute element in div?</a></li>
+<li><a href="#sec-19-2">19.2. On-Scroll animated header</a></li>
+<li><a href="#sec-19-3">19.3. BEM</a></li>
+<li><a href="#sec-19-4">19.4. global box-sizing reset</a></li>
+<li><a href="#sec-19-5">19.5. backgound hero image</a></li>
+<li><a href="#sec-19-6">19.6. centering-in-the-unknown</a></li>
+</ul>
+</li>
+<li><a href="#sec-20">20. front-end reads</a>
+<ul>
+<li><a href="#sec-20-1">20.1. <span class="todo TODO">TODO</span> Codrops</a></li>
+<li><a href="#sec-20-2">20.2. <span class="todo TODO">TODO</span> Best Practices for Speeding Up Your Web Site</a></li>
+<li><a href="#sec-20-3">20.3. <span class="todo TODO">TODO</span> Eric A.Meyer: Containing Floats</a></li>
+<li><a href="#sec-20-4">20.4. <span class="todo TODO">TODO</span> You (probably) don't need a JavaScript framework</a></li>
+<li><a href="#sec-20-5">20.5. <span class="todo TODO">TODO</span> WTF, HTML and CSS?</a></li>
+<li><a href="#sec-20-6">20.6. <span class="todo TODO">TODO</span> Creating Responsive Hero Text With vw Units</a></li>
+<li><a href="#sec-20-7">20.7. <span class="todo TODO">TODO</span> How browsers work</a></li>
+</ul>
+</li>
+<li><a href="#sec-21">21. yeoman</a></li>
+<li><a href="#sec-22">22. good reads</a>
+<ul>
+<li><a href="#sec-22-1">22.1. <span class="todo TODO">TODO</span> Anti Mediocracy Manifesto for Software Development</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> crypto</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> misc</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li><a href="http://www.cs.bham.ac.uk/~mdr/teaching/modules04/security/lectures/hash.html">One-way secure hash function</a>
+</li>
+<li><a href="https://crackstation.net/hashing-security.htm">Salted Password Hashing - Doing it Right</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> stackveflow</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li><a href="http://security.stackexchange.com/questions/4781/do-any-security-experts-recommend-bcrypt-for-password-storage/6415#6415">Do any security experts recommend bcrypt for password storage?</a>
+</li>
+<li><a href="http://security.stackexchange.com/questions/11717/why-are-hash-functions-one-way-if-i-know-the-algorithm-why-cant-i-calculate-t">Why are hash functions one way? If I know the algorithm, why can't I calculate the input from it?</a>
+</li>
+<li><a href="http://stackoverflow.com/questions/2112685/how-do-one-way-hash-functions-work">How do one-way hash functions work?</a>
+</li>
+<li><a href="http://security.stackexchange.com/questions/5668/where-can-i-learn-cryptography-cryptanalysis-the-hard-way-without-going-to-scho">Where can I learn cryptography/cryptanalysis the hard way, without going to school ? Any good book?</a>
+</li>
+<li><a href="http://stackoverflow.com/questions/549/the-definitive-guide-to-form-based-website-authentication">The definitive guide to form based website authentication</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> coding Horror</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li><a href="http://blog.codinghorror.com/youre-probably-storing-passwords-incorrectly/">You're Probably Storing Passwords Incorrectly</a>
+</li>
+<li><a href="http://blog.codinghorror.com/speed-hashing/">Speed Hashing</a>
+</li>
+<li><a href="http://blog.codinghorror.com/rainbow-hash-cracking/">Rainbow Hash Cracking</a>
+</li>
+<li><a href="http://www.securityfocus.com/blogs/262">Enough With The Rainbow Tables: What You Need To Know About Secure Password Schemes</a>
+</li>
+<li><a href="http://blog.codinghorror.com/dictionary-attacks-101/">Dictionary Attacks 101</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> git</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> links</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li><a href="http://stackoverflow.com/questions/5299526/github-commiting-push-gist">github commiting (push) gist</a>
+</li>
+<li><a href="http://wildlyinaccurate.com/a-hackers-guide-to-git/">A Hacker's Guide to Git</a>
+</li>
+<li><a href="https://codewords.recurse.com/issues/two/git-from-the-inside-out">Git from the inside out</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> <a href="http://stackoverflow.com/questions/2003505/delete-a-git-branch-both-locally-and-remotely">delete a Git branch both locally and remotely</a></h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li><code>git push origin --delete &lt;branchName&gt;</code>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> delete a remote tag</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li><code>git tag -d v0.1</code>
+</li>
+<li><code>git push origin :refs/tags/v0.1</code>
+</li>
+<li><code>git push --delete origin v0.1</code>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> reset the last commit, but keep changes</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li><code>git reset --soft HEAD^</code>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> reset the last commit, throw away your changes</h3>
+<div class="outline-text-3" id="text-2-5">
+<ul class="org-ul">
+<li><code>git reset --hard HEAD^</code>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2-6" class="outline-3">
+<h3 id="sec-2-6"><span class="section-number-3">2.6</span> force git push master to origin</h3>
+<div class="outline-text-3" id="text-2-6">
+<ul class="org-ul">
+<li><code>git push origin +master</code>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2-7" class="outline-3">
+<h3 id="sec-2-7"><span class="section-number-3">2.7</span> update a file form a branch (master for example)</h3>
+<div class="outline-text-3" id="text-2-7">
+<ul class="org-ul">
+<li><code>git checkout master -- file.txt</code>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> misc</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li><a href="http://christiantietze.de/posts/2014/07/knowledge-cycle-efficiently-organize-writing-projects/">use a Short Knowledge Cycle to Keep Your Cool</a>
+</li>
+<li><a href="https://gist.github.com/endolith/157796">emoji</a>
+</li>
+<li><a href="http://www.spreeder.com/">spreeder</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> maven</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> custome jar name</h3>
+<div class="outline-text-3" id="text-4-1">
+<div class="org-src-container">
+
+<pre class="src src-nxml">&lt;project&gt;
+    &lt;name&gt;jaxrs-ember&lt;/name&gt;
+&lt;/project&gt;
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> create one fat jar for a jersey 2 application (solution found at <a href="http://stackoverflow.com/questions/12611213/jersey-exception-only-thrown-when-depencencies-assembled-into-a-single-jar">Jersey exception only thrown when depencencies assembled into a single jar</a>)</h3>
+<div class="outline-text-3" id="text-4-2">
+<div class="org-src-container">
+
+<pre class="src src-nxml">&lt;plugin&gt;
+    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;maven-shade-plugin&lt;/artifactId&gt;
+    &lt;version&gt;2.3&lt;/version&gt;
+    &lt;executions&gt;
+        &lt;execution&gt;
+            &lt;phase&gt;package&lt;/phase&gt;
+                &lt;goals&gt;
+                    &lt;goal&gt;shade&lt;/goal&gt;
+                &lt;/goals&gt;
+            &lt;configuration&gt;
+                &lt;transformers&gt;
+                    &lt;transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" /&gt;
+                    &lt;transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer"&gt;
+                        &lt;mainClass&gt;${mainClass}&lt;/mainClass&gt;
+                    &lt;/transformer&gt;
+                &lt;/transformers&gt;
+                &lt;filters&gt;
+                    &lt;filter&gt;
+                        &lt;artifact&gt;*:*&lt;/artifact&gt;
+                        &lt;excludes&gt;
+                            &lt;exclude&gt;META-INF/*.SF&lt;/exclude&gt;
+                            &lt;exclude&gt;META-INF/*.DSA&lt;/exclude&gt;
+                            &lt;exclude&gt;META-INF/*.RSA&lt;/exclude&gt;
+                        &lt;/excludes&gt;
+                    &lt;/filter&gt;
+                &lt;/filters&gt;
+                &lt;finalName&gt;${fat-jar-name}&lt;/finalName&gt;\
+            &lt;/configuration&gt;
+        &lt;/execution&gt;
+    &lt;/executions&gt;
+&lt;/plugin&gt;
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> renanme a jar-with-dependencies file created by maven-assembly-plugin</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+add this two elements to the maven-assembly-plugin configuration
+element:
+</p>
+<div class="org-src-container">
+
+<pre class="src src-nxml">&lt;configuration&gt;
+    ...
+    &lt;finalName&gt;fat-jar-name&lt;/finalName&gt;
+    &lt;appendAssemblyId&gt;false&lt;/appendAssemblyId&gt;
+&lt;/configuration&gt;
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4-4" class="outline-3">
+<h3 id="sec-4-4"><span class="section-number-3">4.4</span> <a href="https://maven.apache.org/plugins/maven-remote-resources-plugin/examples/sharing-resources.html">sharing resources</a></h3>
+</div>
+<div id="outline-container-sec-4-5" class="outline-3">
+<h3 id="sec-4-5"><span class="section-number-3">4.5</span> download javadocs</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+<code>mvn dependency:resolve -Dclassifier=javadoc</code>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> gnu make</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> links</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li><a href="http://nuclear.mutantstargoat.com/articles/make/">Practical Makefiles, by example</a>
+</li>
+<li><a href="http://stackoverflow.com/questions/2145590/what-is-the-purpose-of-phony-in-a-makefile">What is the purpose of .PHNY in a makefile?</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> <a href="https://segment.com/blog/how-we-use-make/">make for the frontend (or how segment.io uses make)</a></h3>
+<div class="outline-text-3" id="text-5-2">
+<pre class="example">
+.PHONY: bundle
+BIN=./node_modules/.bin
+GULP?= $(BIN)/gulp
+
+bundle:
+    $(GULP) bundle
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> emacs</h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> auctex</h3>
+<div class="outline-text-3" id="text-6-1">
+</div><div id="outline-container-sec-6-1-1" class="outline-4">
+<h4 id="sec-6-1-1"><span class="section-number-4">6.1.1</span> <a href="http://www.gnu.org/software/auctex/manual/auctex.html#Folding">floding</a></h4>
+<div class="outline-text-4" id="text-6-1-1">
+<ul class="org-ul">
+<li>Command: TeX-fold-comment
+<code>(C-c C-o C-c)</code> Hide the comment point is located on.
+</li>
+
+<li>Command: TeX-fold-region
+<code>(C-c C-o C-r)</code>  Hide all configured macros in the marked region.
+</li>
+
+<li>Command: TeX-fold-clearout-region
+<code>(C-c C-o r)</code> Permanently unfold all macros and environments in the marked region.
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> python</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li><a href="http://www.jesshamrick.com/2012/09/18/emacs-as-a-python-ide/">Emacs as a Python IDE</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-6-3" class="outline-3">
+<h3 id="sec-6-3"><span class="section-number-3">6.3</span> dired</h3>
+<div class="outline-text-3" id="text-6-3">
+<ul class="org-ul">
+<li><a href="http://stackoverflow.com/questions/2858097/cutomizing-dired">humanize file sizes</a>
+</li>
+</ul>
+<p>
+<code>C-u s</code> and add h to the args.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-6-4" class="outline-3">
+<h3 id="sec-6-4"><span class="section-number-3">6.4</span> erase-buffer</h3>
+<div class="outline-text-3" id="text-6-4">
+<p>
+<code>M-x erase-buffer</code>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> python</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li><a href="https://districtdatalabs.silvrback.com/how-to-develop-quality-python-code">How to Develop Quality Python Code</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> npm</h2>
+<div class="outline-text-2" id="text-8">
+</div><div id="outline-container-sec-8-1" class="outline-3">
+<h3 id="sec-8-1"><span class="section-number-3">8.1</span> using <a href="https://github.com/Qard/onchange">onChange</a> for watching files</h3>
+</div>
+</div>
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> latex</h2>
+<div class="outline-text-2" id="text-9">
+</div><div id="outline-container-sec-9-1" class="outline-3">
+<h3 id="sec-9-1"><span class="section-number-3">9.1</span> color</h3>
+<div class="outline-text-3" id="text-9-1">
+<p>
+\usepackage{color}
+  {\color{red}
+  red text.
+}
+</p>
+</div>
+</div>
+<div id="outline-container-sec-9-2" class="outline-3">
+<h3 id="sec-9-2"><span class="section-number-3">9.2</span> <a href="http://tex.stackexchange.com/questions/10372/in-line-verb-overfull-hbox-problem">In-line \verb — overfull hbox problem</a></h3>
+<div class="outline-text-3" id="text-9-2">
+<p>
+always use <code>\texttt</code> or <code>\ttfamily</code> for longer text instead of
+<code>\verb||</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-9-3" class="outline-3">
+<h3 id="sec-9-3"><span class="section-number-3">9.3</span> caption package</h3>
+<div class="outline-text-3" id="text-9-3">
+<p>
+customize figure and table names in captions:
+</p>
+<ul class="org-ul">
+<li><code>\captionsetup[figure]{name=Figure.}</code>
+</li>
+<li><code>\captionsetup[table]{name=Table.}</code>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-9-4" class="outline-3">
+<h3 id="sec-9-4"><span class="section-number-3">9.4</span> style itemize</h3>
+<div class="outline-text-3" id="text-9-4">
+<div class="org-src-container">
+
+<pre class="src src-tex">\begin{itemize}
+\renewcommand\labelitemi{--}
+\item asdasd
+\item dsfsdf
+\end{itemize
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-9-5" class="outline-3">
+<h3 id="sec-9-5"><span class="section-number-3">9.5</span> <a href="http://tex.stackexchange.com/questions/23403/how-can-i-produce-an-unnumbered-chapter-for-the-introduction">How can I produce an unnumbered chapter for the introduction?</a></h3>
+<div class="outline-text-3" id="text-9-5">
+<p>
+\chapter*{introduction}
+\addcontentsline{toc}{chapter}{Introduction} \markboth{INTRODUCTION}{}
+</p>
+</div>
+</div>
+<div id="outline-container-sec-9-6" class="outline-3">
+<h3 id="sec-9-6"><span class="section-number-3">9.6</span> rsfs fonts for math</h3>
+<div class="outline-text-3" id="text-9-6">
+<ul class="org-ul">
+<li>install the package via: <code>tlmgr install rsfs</code>.
+</li>
+<li>import the package in the preamble:
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-tex">\usepackage{mathrsfs}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+</pre>
+</div>
+<ul class="org-ul">
+<li>use it!
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-tex">$mathpzc{uppercase or lowercase characters}$
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-9-7" class="outline-3">
+<h3 id="sec-9-7"><span class="section-number-3">9.7</span> <a href="http://ctan.org/pkg/enumitem">enumitem</a>: Control layout of itemize, enumerate, description</h3>
+<div class="outline-text-3" id="text-9-7">
+<p>
+Add <code>\usepackage{enumitem}</code> to enable better default items
+indention.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-9-8" class="outline-3">
+<h3 id="sec-9-8"><span class="section-number-3">9.8</span> arabic typesetting</h3>
+<div class="outline-text-3" id="text-9-8">
+<div class="org-src-container">
+
+<pre class="src src-tex">\documentclass[a4paper,10pt]{article}
+
+\usepackage{arabtex} \usepackage{utf8}
+
+\begin{document}
+\setcode{utf8}
+\begin{arabtext}
+ السَلامُ عَليكم ورَحمةُ الله وبَركاته \end{arabtext} \end{document}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-9-9" class="outline-3">
+<h3 id="sec-9-9"><span class="section-number-3">9.9</span> inline enumerate items with a modified label</h3>
+<div class="outline-text-3" id="text-9-9">
+<ul class="org-ul">
+<li>a <a href="http://tex.stackexchange.com/questions/103086/customizing-inline-enumerate-with-enumitem-still-not-working">link</a> to the source.
+</li>
+<li>use <code>enumitem</code> package with <code>inline</code> option to enable inlined
+enumeration command (<code>enumerate*</code>).
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-tex">\usepackage[inline]{enumitem}
+</pre>
+</div>
+<ul class="org-ul">
+<li>define `inlinelist` command:
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-tex">\newlist{inlinelist}{enumerate*}{1}
+\setlist*[inlinelist,1]{%
+  label=(\roman*),
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-9-10" class="outline-3">
+<h3 id="sec-9-10"><span class="section-number-3">9.10</span> center figure that is wider than \textwidth</h3>
+<div class="outline-text-3" id="text-9-10">
+<ul class="org-ul">
+<li><a href="http://tex.stackexchange.com/questions/16582/center-figure-that-is-wider-than-textwidth">tex.stackexchange</a>
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-tex">%% use the package in the main file
+\usepackage[export]{adjustbox}
+
+%% enable centre option
+\includegraphics[width=1.2\textwidth, center]{figure.eps}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-9-11" class="outline-3">
+<h3 id="sec-9-11"><span class="section-number-3">9.11</span> centering caption of a figure</h3>
+<div class="outline-text-3" id="text-9-11">
+<ul class="org-ul">
+<li><a href="http://tex.stackexchange.com/questions/54475/centering-caption-of-a-figure">tex.stackexchange</a>
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-tex">\usepackage[justification=centering]{caption}
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> linux</h2>
+<div class="outline-text-2" id="text-10">
+</div><div id="outline-container-sec-10-1" class="outline-3">
+<h3 id="sec-10-1"><span class="section-number-3">10.1</span> copy with preserve permissions</h3>
+<div class="outline-text-3" id="text-10-1">
+<p>
+<code>cp -p</code>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-10-2" class="outline-3">
+<h3 id="sec-10-2"><span class="section-number-3">10.2</span> (ssh) copy files from local to remote</h3>
+<div class="outline-text-3" id="text-10-2">
+<p>
+<code>scp /path/to/file username@host:/path/to/destination</code>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-10-3" class="outline-3">
+<h3 id="sec-10-3"><span class="section-number-3">10.3</span> add user to a group</h3>
+<div class="outline-text-3" id="text-10-3">
+<p>
+<code>sudo adduser &lt;username&gt; www-data</code>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-10-4" class="outline-3">
+<h3 id="sec-10-4"><span class="section-number-3">10.4</span> convert png/gif to ico (<a href="http://stackoverflow.com/questions/3185677/converting-gifs-pngs-and-jpgs-to-ico-files-using-imagemagick">link</a>)</h3>
+<div class="outline-text-3" id="text-10-4">
+<p>
+<code>/usr/bin/convert -resize x16 -gravity center -crop 16x16+0+0 input.png -flatten -colors 256 -background transparent output/favicon.ico</code>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-10-5" class="outline-3">
+<h3 id="sec-10-5"><span class="section-number-3">10.5</span> blur image</h3>
+<div class="outline-text-3" id="text-10-5">
+<p>
+<code>convert -blur 4x4 image.jpg image-blur.jpg</code>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> ubuntu</h2>
+<div class="outline-text-2" id="text-11">
+</div><div id="outline-container-sec-11-1" class="outline-3">
+<h3 id="sec-11-1"><span class="section-number-3">11.1</span> public ip</h3>
+<div class="outline-text-3" id="text-11-1">
+<p>
+<code>curl ipecho.net/plain ; echo</code>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-11-2" class="outline-3">
+<h3 id="sec-11-2"><span class="section-number-3">11.2</span> finding the PID of the process using a specific port?</h3>
+<div class="outline-text-3" id="text-11-2">
+<p>
+<code>sudo netstat -nlp | grep 80</code>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-11-3" class="outline-3">
+<h3 id="sec-11-3"><span class="section-number-3">11.3</span> newgrp</h3>
+<div class="outline-text-3" id="text-11-3">
+<p>
+<code>newgrp</code> is used to change the current group <code>ID</code> during a login
+session, it changes the current real group <code>ID</code> to the named group.
+</p>
+
+<p>
+I used this after adding my user name to the <code>docker</code> group (during
+the <code>docker</code> post-installation):
+</p>
+
+<ul class="org-ul">
+<li><code>$ sudo usermod -aG docker $USER</code>
+</li>
+<li><code>$ newgrp docker</code>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-12" class="outline-2">
+<h2 id="sec-12"><span class="section-number-2">12</span> centos</h2>
+<div class="outline-text-2" id="text-12">
+</div><div id="outline-container-sec-12-1" class="outline-3">
+<h3 id="sec-12-1"><span class="section-number-3">12.1</span> check centos version</h3>
+<div class="outline-text-3" id="text-12-1">
+<p>
+<code>cat /etc/centos-release</code>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-13" class="outline-2">
+<h2 id="sec-13"><span class="section-number-2">13</span> docker</h2>
+<div class="outline-text-2" id="text-13">
+</div><div id="outline-container-sec-13-1" class="outline-3">
+<h3 id="sec-13-1"><span class="section-number-3">13.1</span> stop all containers</h3>
+<div class="outline-text-3" id="text-13-1">
+<p>
+<code>$ docker stop $(docker ps -a -q)</code>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-13-2" class="outline-3">
+<h3 id="sec-13-2"><span class="section-number-3">13.2</span> remove all dangling images (untaged images)</h3>
+<div class="outline-text-3" id="text-13-2">
+<p>
+<code>$docker rmi -f $(docker images -f "dangling=true" -q)</code>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-14" class="outline-2">
+<h2 id="sec-14"><span class="section-number-2">14</span> php</h2>
+<div class="outline-text-2" id="text-14">
+</div><div id="outline-container-sec-14-1" class="outline-3">
+<h3 id="sec-14-1"><span class="section-number-3">14.1</span> install nginx/php7/mysql on ubuntu 14.04 LTS</h3>
+<div class="outline-text-3" id="text-14-1">
+</div><div id="outline-container-sec-14-1-1" class="outline-4">
+<h4 id="sec-14-1-1"><span class="section-number-4">14.1.1</span> install nginx</h4>
+<div class="outline-text-4" id="text-14-1-1">
+<div class="org-src-container">
+
+<pre class="src src-sh">sudo apt-get install nginx
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-14-1-2" class="outline-4">
+<h4 id="sec-14-1-2"><span class="section-number-4">14.1.2</span> install php7</h4>
+<div class="outline-text-4" id="text-14-1-2">
+<div class="org-src-container">
+
+<pre class="src src-sh">sudo add-apt-repository ppa:ondrej/php
+
+sudo apt-get install -y language-pack-en-base
+
+sudo LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php
+
+sudo apt-get install php7.0-fpm php7.0-sqlite php7.0-mysql
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-14-1-3" class="outline-4">
+<h4 id="sec-14-1-3"><span class="section-number-4">14.1.3</span> restart nginx and php7</h4>
+<div class="outline-text-4" id="text-14-1-3">
+<div class="org-src-container">
+
+<pre class="src src-sh">sudo service nginx restart
+sudo service php7.0-fpm restart
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-14-1-4" class="outline-4">
+<h4 id="sec-14-1-4"><span class="section-number-4">14.1.4</span> configuration file example</h4>
+<div class="outline-text-4" id="text-14-1-4">
+<ul class="org-ul">
+<li>create a <code>dev.conf</code> file at <code>/etc/nginx/sites-available</code>:
+</li>
+</ul>
+
+<div class="org-src-container">
+
+<pre class="src src-sh">server {
+    listen 3001 default_server;
+    listen [::]:3001 default_server ipv6only=on;
+
+    root /var/www/dev;
+    index index.php;
+
+    server_name localhost;
+
+    location / {
+    ;;    rewrite ^/$ /kickstart/ break;
+    }
+
+    location ~ \.php$ {
+        try_files $uri =404;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+}
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>enable <code>dev.conf</code> configuration by:
+</li>
+</ul>
+<p>
+<code>ln -s /etc/nginx/sites-available/dev.conf /etc/nginx/sites-enables/dev.conf</code>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-14-2" class="outline-3">
+<h3 id="sec-14-2"><span class="section-number-3">14.2</span> get error messages in php</h3>
+<div class="outline-text-3" id="text-14-2">
+<div class="org-src-container">
+
+<pre class="src src-php">ini_set('display_startup_errors',1);
+ini_set('display_errors',1);
+error_reporting(-1);
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-15" class="outline-2">
+<h2 id="sec-15"><span class="section-number-2">15</span> drupal-7.x</h2>
+<div class="outline-text-2" id="text-15">
+</div><div id="outline-container-sec-15-1" class="outline-3">
+<h3 id="sec-15-1"><span class="section-number-3">15.1</span> basic</h3>
+<div class="outline-text-3" id="text-15-1">
+<ul class="org-ul">
+<li>hooks are internal events.
+</li>
+</ul>
+</div>
+<div id="outline-container-sec-15-1-1" class="outline-4">
+<h4 id="sec-15-1-1"><span class="section-number-4">15.1.1</span> event/hook/trigger</h4>
+<div class="outline-text-4" id="text-15-1-1">
+<ul class="org-ul">
+<li>hook is an action (function) executed when an internal event
+fired.
+</li>
+<li>action is a something that drupal does.
+</li>
+<li>trigger is a combination of an hook with an operation.
+</li>
+<li>traigger = &lt;action, hook&gt;
+</li>
+<li>we can assigne a trigger name to a hook function.
+</li>
+<li>action is an abstraction of a hook used by trigger module.
+</li>
+<li>we use <code>hook_action_info()</code> to define an action, or <b>hook to
+define a hook</b>.
+</li>
+<li>we have simple actions and advanced(configurable) ones.
+</li>
+<li>we can create simple actions by instancing an advanced one.
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-15-2" class="outline-3">
+<h3 id="sec-15-2"><span class="section-number-3">15.2</span> clearing the cache</h3>
+<div class="outline-text-3" id="text-15-2">
+<ul class="org-ul">
+<li>clear the cache with drush: <code>drush cc all</code>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-15-3" class="outline-3">
+<h3 id="sec-15-3"><span class="section-number-3">15.3</span> how to fix "The following module is missing from the file system"</h3>
+<div class="outline-text-3" id="text-15-3">
+</div><div id="outline-container-sec-15-3-1" class="outline-4">
+<h4 id="sec-15-3-1"><span class="section-number-4">15.3.1</span> Using  <a href="https://www.drupal.org/project/module_missing_message_fixer">Module Missing Message Fixer</a></h4>
+</div>
+</div>
+<div id="outline-container-sec-15-4" class="outline-3">
+<h3 id="sec-15-4"><span class="section-number-3">15.4</span> drupal debuging</h3>
+<div class="outline-text-3" id="text-15-4">
+</div><div id="outline-container-sec-15-4-1" class="outline-4">
+<h4 id="sec-15-4-1"><span class="section-number-4">15.4.1</span> <a href="https://www.drupal.org/project/devel">devel</a></h4>
+<div class="outline-text-4" id="text-15-4-1">
+</div><ol class="org-ol"><li><a id="sec-15-4-1-1" name="sec-15-4-1-1"></a>disable and enable a module<br  /><div class="outline-text-5" id="text-15-4-1-1">
+<p>
+<code>drush dre &lt;module-name&gt; -y</code>
+</p>
+</div>
+</li>
+<li><a id="sec-15-4-1-2" name="sec-15-4-1-2"></a>use <code>dvm</code> instead of <code>dpm</code><br  /></li></ol>
+</div>
+</div>
+<div id="outline-container-sec-15-5" class="outline-3">
+<h3 id="sec-15-5"><span class="section-number-3">15.5</span> <a href="https://www.drupal.org/node/2718253">upload progress on php7</a></h3>
+<div class="outline-text-3" id="text-15-5">
+<div class="org-src-container">
+
+<pre class="src src-sh">git clone https://github.com/Jan-E/uploadprogress
+cd uploadprogres
+phpize
+./configure
+make
+sudo make install
+sudo touch /etc/php/7.0/mods-available/uploadprogress.ini
+echo "extension=uploadprogress.so" &gt; /etc/php/7.0/mods-available/uploadprogress.ini
+sudo phpenmod uploadprogress
+sudo service apache2 restart
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-15-6" class="outline-3">
+<h3 id="sec-15-6"><span class="section-number-3">15.6</span> rebuild menu system</h3>
+<div class="outline-text-3" id="text-15-6">
+<div class="org-src-container">
+
+<pre class="src src-sh">~drush eval "menu_rebuild();"~
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-15-7" class="outline-3">
+<h3 id="sec-15-7"><span class="section-number-3">15.7</span> drush get variable</h3>
+<div class="outline-text-3" id="text-15-7">
+<ul class="org-ul">
+<li>get all variables: <code>drush vget</code>
+</li>
+<li>get a <code>&lt;variable&gt;</code>: <code>drush vget &lt;variable&gt;</code>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-15-8" class="outline-3">
+<h3 id="sec-15-8"><span class="section-number-3">15.8</span> drush remove orphaned action</h3>
+<div class="outline-text-3" id="text-15-8">
+<p>
+<code>drush php-eval "actions_synchronize(TRUE);</code>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-15-9" class="outline-3">
+<h3 id="sec-15-9"><span class="section-number-3">15.9</span> permissions problems on Centos/SELinux</h3>
+<div class="outline-text-3" id="text-15-9">
+<p>
+<code>sudo chcon -R -t httpd_sys_content_rw_t /var/www/html/drupal/sites/</code>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-15-10" class="outline-3">
+<h3 id="sec-15-10"><span class="section-number-3">15.10</span> modules you need</h3>
+</div>
+<div id="outline-container-sec-15-11" class="outline-3">
+<h3 id="sec-15-11"><span class="section-number-3">15.11</span> reading</h3>
+<div class="outline-text-3" id="text-15-11">
+</div><div id="outline-container-sec-15-11-1" class="outline-4">
+<h4 id="sec-15-11-1"><span class="section-number-4">15.11.1</span> <a href="https://www.drupal.org/node/803746">Building a Drupal site with Git</a></h4>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-16" class="outline-2">
+<h2 id="sec-16"><span class="section-number-2">16</span> nginx</h2>
+<div class="outline-text-2" id="text-16">
+</div><div id="outline-container-sec-16-1" class="outline-3">
+<h3 id="sec-16-1"><span class="section-number-3">16.1</span> virtual hosts</h3>
+</div>
+</div>
+<div id="outline-container-sec-17" class="outline-2">
+<h2 id="sec-17"><span class="section-number-2">17</span> apache</h2>
+<div class="outline-text-2" id="text-17">
+</div><div id="outline-container-sec-17-1" class="outline-3">
+<h3 id="sec-17-1"><span class="section-number-3">17.1</span> htacess</h3>
+</div>
+</div>
+<div id="outline-container-sec-18" class="outline-2">
+<h2 id="sec-18"><span class="section-number-2">18</span> wordpress</h2>
+<div class="outline-text-2" id="text-18">
+</div><div id="outline-container-sec-18-1" class="outline-3">
+<h3 id="sec-18-1"><span class="section-number-3">18.1</span> proper wordpress filesystem permissions and ownerships (chmod)</h3>
+<div class="outline-text-3" id="text-18-1">
+<ul class="org-ul">
+<li><a href="http://stackoverflow.com/questions/18352682/correct-file-permissions-for-wordpress">stackoverflow: Correct file permissions for WordPress</a>
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-sh">chown www-data:www-data -R *          # Let apache be owner
+find . -type d -exec chmod 755 {} \;  # Change directory permissions rwxr-xr-x
+find . -type f -exec chmod 644 {} \;  # Change file permissions rw-r--r--
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-19" class="outline-2">
+<h2 id="sec-19"><span class="section-number-2">19</span> css</h2>
+<div class="outline-text-2" id="text-19">
+</div><div id="outline-container-sec-19-1" class="outline-3">
+<h3 id="sec-19-1"><span class="section-number-3">19.1</span> How to center absolute element in div?</h3>
+<div class="outline-text-3" id="text-19-1">
+<ul class="org-ul">
+<li><a href="http://stackoverflow.com/questions/1776915/how-to-center-absolute-element-in-div">stackoverflow: How to center absolute element in div?</a>
+</li>
+</ul>
+
+<div class="org-src-container">
+
+<pre class="src src-css">#content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-19-2" class="outline-3">
+<h3 id="sec-19-2"><span class="section-number-3">19.2</span> On-Scroll animated header</h3>
+</div>
+<div id="outline-container-sec-19-3" class="outline-3">
+<h3 id="sec-19-3"><span class="section-number-3">19.3</span> BEM</h3>
+</div>
+<div id="outline-container-sec-19-4" class="outline-3">
+<h3 id="sec-19-4"><span class="section-number-3">19.4</span> global box-sizing reset</h3>
+<div class="outline-text-3" id="text-19-4">
+<div class="org-src-container">
+
+<pre class="src src-css">html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-19-5" class="outline-3">
+<h3 id="sec-19-5"><span class="section-number-3">19.5</span> backgound hero image</h3>
+<div class="outline-text-3" id="text-19-5">
+<div class="org-src-container">
+
+<pre class="src src-css">background: url('bg-image.jpg') no-repeat center center;
+background-size: cover;
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-19-6" class="outline-3">
+<h3 id="sec-19-6"><span class="section-number-3">19.6</span> <a href="https://css-tricks.com/centering-in-the-unknown/">centering-in-the-unknown</a></h3>
+</div>
+</div>
+<div id="outline-container-sec-20" class="outline-2">
+<h2 id="sec-20"><span class="section-number-2">20</span> front-end reads</h2>
+<div class="outline-text-2" id="text-20">
+</div><div id="outline-container-sec-20-1" class="outline-3">
+<h3 id="sec-20-1"><span class="section-number-3">20.1</span> <span class="todo TODO">TODO</span> <a href="http://tympanus.net/codrops/">Codrops</a></h3>
+</div>
+<div id="outline-container-sec-20-2" class="outline-3">
+<h3 id="sec-20-2"><span class="section-number-3">20.2</span> <span class="todo TODO">TODO</span> <a href="https://developer.yahoo.com/performance/rules.html">Best Practices for Speeding Up Your Web Site</a></h3>
+</div>
+<div id="outline-container-sec-20-3" class="outline-3">
+<h3 id="sec-20-3"><span class="section-number-3">20.3</span> <span class="todo TODO">TODO</span> <a href="http://complexspiral.com/publications/containing-floats/">Eric A.Meyer: Containing Floats</a></h3>
+</div>
+<div id="outline-container-sec-20-4" class="outline-3">
+<h3 id="sec-20-4"><span class="section-number-3">20.4</span> <span class="todo TODO">TODO</span> <a href="https://slack-files.com/T03JT4FC2-F151AAF7A-13fe6f98da">You (probably) don't need a JavaScript framework</a></h3>
+</div>
+<div id="outline-container-sec-20-5" class="outline-3">
+<h3 id="sec-20-5"><span class="section-number-3">20.5</span> <span class="todo TODO">TODO</span> <a href="http://wtfhtmlcss.com/">WTF, HTML and CSS?</a></h3>
+</div>
+<div id="outline-container-sec-20-6" class="outline-3">
+<h3 id="sec-20-6"><span class="section-number-3">20.6</span> <span class="todo TODO">TODO</span> <a href="http://thenewcode.com/739/Creating-Responsive-Hero-Text-With-vw-Units">Creating Responsive Hero Text With vw Units</a></h3>
+</div>
+<div id="outline-container-sec-20-7" class="outline-3">
+<h3 id="sec-20-7"><span class="section-number-3">20.7</span> <span class="todo TODO">TODO</span> <a href="http://taligarsiel.com/Projects/howbrowserswork1.htm">How browsers work</a></h3>
+</div>
+</div>
+<div id="outline-container-sec-21" class="outline-2">
+<h2 id="sec-21"><span class="section-number-2">21</span> yeoman</h2>
+</div>
+<div id="outline-container-sec-22" class="outline-2">
+<h2 id="sec-22"><span class="section-number-2">22</span> good reads</h2>
+<div class="outline-text-2" id="text-22">
+</div><div id="outline-container-sec-22-1" class="outline-3">
+<h3 id="sec-22-1"><span class="section-number-3">22.1</span> <span class="todo TODO">TODO</span> <a href="http://gabordemooij.com/index.php?p=%252Fmanifest">Anti Mediocracy Manifesto for Software Development</a></h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: atlas</p>
+<p class="date">Created: 2016-08-27 س 23:51</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.1.50.2 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
