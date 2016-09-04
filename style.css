@@ -82,3 +82,8 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+
+#postamble {
+    display: none;
+}
