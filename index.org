@@ -36,6 +36,8 @@
 - ~git push origin +master~
 ** update a file form a branch (master for example)
 - ~git checkout master -- file.txt~
+** remove folder from history without remove it locally
+   ~git rm --cached -r folderName~
 * misc
 - [[http://christiantietze.de/posts/2014/07/knowledge-cycle-efficiently-organize-writing-projects/][use a Short Knowledge Cycle to Keep Your Cool]]
 - [[https://gist.github.com/endolith/157796][emoji]]
