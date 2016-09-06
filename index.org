@@ -220,6 +220,9 @@ $mathpzc{uppercase or lowercase characters}$
    ~/usr/bin/convert -resize x16 -gravity center -crop 16x16+0+0 input.png -flatten -colors 256 -background transparent output/favicon.ico~
 ** blur image
    ~convert -blur 4x4 image.jpg image-blur.jpg~
+* bash
+** parse date in shell
+   ~$(data +%F)~
 * ubuntu
 ** public ip
    ~curl ipecho.net/plain ; echo~
