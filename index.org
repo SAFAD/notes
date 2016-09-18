@@ -222,7 +222,7 @@ $mathpzc{uppercase or lowercase characters}$
    ~convert -blur 4x4 image.jpg image-blur.jpg~
 * bash
 ** parse date in shell
-   ~$(data +%F)~
+   ~$(date +%F)~
 * ubuntu
 ** public ip
    ~curl ipecho.net/plain ; echo~
@@ -402,6 +402,8 @@ background: url('bg-image.jpg') no-repeat center center;
 background-size: cover;
 #+END_SRC
 ** [[https://css-tricks.com/centering-in-the-unknown/][centering-in-the-unknown]]
+** [[https://css-tricks.com/snippets/html/glyphs/][html/css special characters]]
+
 * front-end reads
 ** TODO [[http://tympanus.net/codrops/][Codrops]]
 ** TODO [[https://developer.yahoo.com/performance/rules.html][Best Practices for Speeding Up Your Web Site]]
