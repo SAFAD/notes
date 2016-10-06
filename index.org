@@ -240,6 +240,7 @@ $mathpzc{uppercase or lowercase characters}$
 * centos
 ** check centos version
    ~cat /etc/centos-release~
+** install nfs-common before mount shared folder
 * docker
 ** stop all containers
    ~$ docker stop $(docker ps -a -q)~
@@ -415,5 +416,7 @@ background-size: cover;
 ** TODO [[http://thenewcode.com/739/Creating-Responsive-Hero-Text-With-vw-Units][Creating Responsive Hero Text With vw Units]]
 ** TODO [[http://taligarsiel.com/Projects/howbrowserswork1.htm][How browsers work]]
 * yeoman
+* html
+** [[http://callmenick.com/post/force-favicon-refresh][force favicon refresh]]
 * good reads
 ** TODO [[http://gabordemooij.com/index.php?p%3D%252Fmanifest][Anti Mediocracy Manifesto for Software Development]]
