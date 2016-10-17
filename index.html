@@ -4,10 +4,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Some useful links, quick tips and tricks</title>
-<!-- 2016-10-06 خ 20:32 -->
+<!-- 2016-10-17 ن 11:00 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
-<meta  name="author" content="atlas" />
+<meta  name="author" content="tarrsalah &lt;tarrsalah@gmail.com&gt;" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center; }
@@ -279,6 +279,11 @@ for the JavaScript code in this tag.
 <ul>
 <li><a href="#sec-13-1">13.1. check centos version</a></li>
 <li><a href="#sec-13-2">13.2. install nfs-common before mount shared folder</a></li>
+<li><a href="#sec-13-3">13.3. add user with password</a></li>
+<li><a href="#sec-13-4">13.4. list all users</a></li>
+<li><a href="#sec-13-5">13.5. add current user to a group</a></li>
+<li><a href="#sec-13-6">13.6. make a user sudo</a></li>
+<li><a href="#sec-13-7">13.7. ssh login  witout password</a></li>
 </ul>
 </li>
 <li><a href="#sec-14">14. docker</a>
@@ -998,6 +1003,58 @@ the <code>docker</code> post-installation):
 <div id="outline-container-sec-13-2" class="outline-3">
 <h3 id="sec-13-2"><span class="section-number-3">13.2</span> install nfs-common before mount shared folder</h3>
 </div>
+<div id="outline-container-sec-13-3" class="outline-3">
+<h3 id="sec-13-3"><span class="section-number-3">13.3</span> add user with password</h3>
+<div class="outline-text-3" id="text-13-3">
+<ul class="org-ul">
+<li>add user <code>useradd &lt;username&gt;</code>
+</li>
+<li>set a password <code>passwd &lt;username&gt;</code>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-13-4" class="outline-3">
+<h3 id="sec-13-4"><span class="section-number-3">13.4</span> list all users</h3>
+<div class="outline-text-3" id="text-13-4">
+<ul class="org-ul">
+<li><code>less /etc/passwd</code>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-13-5" class="outline-3">
+<h3 id="sec-13-5"><span class="section-number-3">13.5</span> add current user to a group</h3>
+<div class="outline-text-3" id="text-13-5">
+<ul class="org-ul">
+<li><code>sudo usermod -a -G &lt;group&gt; &lt;username&gt;</code>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-13-6" class="outline-3">
+<h3 id="sec-13-6"><span class="section-number-3">13.6</span> make a user sudo</h3>
+<div class="outline-text-3" id="text-13-6">
+<ul class="org-ul">
+<li>add the user to the <code>wheel</code> group
+<code>usermode aG wheel &lt;username&gt;</code>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-13-7" class="outline-3">
+<h3 id="sec-13-7"><span class="section-number-3">13.7</span> ssh login  witout password</h3>
+<div class="outline-text-3" id="text-13-7">
+<ul class="org-ul">
+<li>create public and private keys using <code>ssh-key-gen</code> on local host
+<code>ssh-keygen</code>
+</li>
+<li>copy the public key to remote-host using <code>ssh-copy-id</code>
+     <code>ssh-copy-id -i ~/.ssh/id_rsa.pub &lt;remote-host&gt;</code>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div id="outline-container-sec-14" class="outline-2">
 <h2 id="sec-14"><span class="section-number-2">14</span> docker</h2>
@@ -1411,8 +1468,8 @@ background-size: cover;
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: atlas</p>
-<p class="date">Created: 2016-10-06 خ 20:32</p>
+<p class="author">Author: tarrsalah &lt;tarrsalah@gmail.com&gt;</p>
+<p class="date">Created: 2016-10-17 ن 11:00</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.1.50.2 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>

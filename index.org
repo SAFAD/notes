@@ -1,4 +1,5 @@
 #+TITLE: Some useful links, quick tips and tricks
+#+AUTHOR: tarrsalah <tarrsalah@gmail.com>
 #+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1">
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
 * crypto
@@ -241,6 +242,21 @@ $mathpzc{uppercase or lowercase characters}$
 ** check centos version
    ~cat /etc/centos-release~
 ** install nfs-common before mount shared folder
+** add user with password
+   - add user ~useradd <username>~
+   - set a password ~passwd <username>~
+** list all users
+   - ~less /etc/passwd~
+** add current user to a group
+   - ~sudo usermod -a -G <group> <username>~
+** make a user sudo
+   - add the user to the ~wheel~ group
+     ~usermode aG wheel <username>~
+** ssh login  witout password
+   - create public and private keys using ~ssh-key-gen~ on local host
+    ~ssh-keygen~
+   - copy the public key to remote-host using ~ssh-copy-id~
+     ~ssh-copy-id -i ~/.ssh/id_rsa.pub <remote-host>~
 * docker
 ** stop all containers
    ~$ docker stop $(docker ps -a -q)~
