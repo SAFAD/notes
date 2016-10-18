@@ -329,6 +329,8 @@ ini_set('display_startup_errors',1);
 ini_set('display_errors',1);
 error_reporting(-1);
 #+END_SRC
+** install composer
+   ~php -r "readfile('https://getcomposer.org/installer');" | php && mv composer.phar /usr/local/bin/composer~
 * mysql
 ** show all grants for a user
    ~mysql > show grants for '<username>'@'<host>'~~
