@@ -221,6 +221,11 @@ $mathpzc{uppercase or lowercase characters}$
    ~/usr/bin/convert -resize x16 -gravity center -crop 16x16+0+0 input.png -flatten -colors 256 -background transparent output/favicon.ico~
 ** blur image
    ~convert -blur 4x4 image.jpg image-blur.jpg~
+** create tar.gz file from a directory
+   ~tar -zcvf archive-name.tar.gz directory-name~
+** get the public ip adress of a server
+   ~ip addre show eth0 | grep inet | awk 'NR==1{print $2}'~~
+** TODO [[https://www.madboa.com/geek/gpg-quickstart/][A quick HOWTO for getting started with GnuPG.]]
 * bash
 ** parse date in shell
    ~$(date +%F)~
@@ -257,6 +262,9 @@ $mathpzc{uppercase or lowercase characters}$
     ~ssh-keygen~
    - copy the public key to remote-host using ~ssh-copy-id~
      ~ssh-copy-id -i ~/.ssh/id_rsa.pub <remote-host>~
+* selinux
+** set selinux to permissive
+   ~sudo setenforce permissive~
 * docker
 ** stop all containers
    ~$ docker stop $(docker ps -a -q)~
@@ -321,7 +329,9 @@ ini_set('display_startup_errors',1);
 ini_set('display_errors',1);
 error_reporting(-1);
 #+END_SRC
-
+* mysql
+** show all grants for a user
+   ~mysql > show grants for '<username>'@'<host>'~~
 * drupal-7.x
 ** basic
    - hooks are internal events.
