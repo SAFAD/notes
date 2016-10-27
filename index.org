@@ -226,6 +226,56 @@ $mathpzc{uppercase or lowercase characters}$
 ** get the public ip adress of a server
    ~ip addre show eth0 | grep inet | awk 'NR==1{print $2}'~~
 ** TODO [[https://www.madboa.com/geek/gpg-quickstart/][A quick HOWTO for getting started with GnuPG.]]
+** sendmail
+*** configure sendmail without dns and behind ISP ([[https://linuxconfig.org/configuring-gmail-as-sendmail-email-relay][Configuring Gmail as a Sendmail email relay]])
+    the next steps are applied to send an email behind an ISP or an ADSL
+    (without DNS) by relying on gmail auth system:
+
+    1- make sure that you have ~/etc/hostname and~ ~/etc/hosts~
+      - ~/etc/hostname~
+        example: ~anyname.anydomain~
+      - ~/etc/hosts~
+        example: ~127.0.0.1 localhost.localdomain localhost atlas.atlas atlas~
+
+    2- to prevent mail proviers from blacklising your ip adress, create
+      a gmail authentification file:
+      #+BEGIN_SRC sh
+      # mkdir -m 700 /etc/mail/authinfo/
+      #  cd /etc/mail/authinfo
+      #+END_SRC
+
+      the content ff the gmail-auth file:
+      #+BEGIN_SRC text
+      AuthInfo: "U:root" "I:<gmail adress>" "P:<passoword>"
+      #+END_SRC
+
+    3- create a hashmap for ~gmail-auth~ file:
+      #+BEGIN_SRC sh
+      # makemap hash gmail-auth < gmail-auth
+      #+END_SRC
+      the above cammand should create a ~gmail-auth.db~ file inside
+      ~/etc/mail/authinfo~
+
+    4- configure ~sendmail~: put bellow lines into your ~sendmail.mc~
+      configuration file right above first ~"MAILER"~ definition line:
+      #+BEGIN_SRC conf
+      define(`SMART_HOST',`[smtp.gmail.com]')dnl
+      define(`RELAY_MAILER_ARGS', `TCP $h 587')dnl
+      define(`ESMTP_MAILER_ARGS', `TCP $h 587')dnl
+      define(`confAUTH_OPTIONS', `A p')dnl
+      TRUST_AUTH_MECH(`EXTERNAL DIGEST-MD5 CRAM-MD5 LOGIN PLAIN')dnl
+      define(`confAUTH_MECHANISMS', `EXTERNAL GSSAPI DIGEST-MD5 CRAM-MD5 LOGIN PLAIN')dnl
+      FEATURE(`authinfo',`hash -o /etc/mail/authinfo/gmail-auth.db')dnl
+      #+END_SRC
+
+    5- rebuild the ~sendmail~ configuration
+      #+BEGIN_SRC sh
+      # cd /etc/mail
+      # make
+      #+END_SRC
+    6- reload ~sendmail~ service:
+      ~sudo service sendmail reload~
+    7- turn on the less secure apps option.
 * bash
 ** parse date in shell
    ~$(date +%F)~

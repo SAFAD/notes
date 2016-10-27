@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Some useful links, quick tips and tricks</title>
-<!-- 2016-10-18 ث 13:57 -->
+<!-- 2016-10-27 خ 17:31 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="tarrsalah &lt;tarrsalah@gmail.com&gt;" />
@@ -264,6 +264,11 @@ for the JavaScript code in this tag.
 <li><a href="#sec-10-6">10.6. create tar.gz file from a directory</a></li>
 <li><a href="#sec-10-7">10.7. get the public ip adress of a server</a></li>
 <li><a href="#sec-10-8">10.8. <span class="todo TODO">TODO</span> A quick HOWTO for getting started with GnuPG.</a></li>
+<li><a href="#sec-10-9">10.9. sendmail</a>
+<ul>
+<li><a href="#sec-10-9-1">10.9.1. configure sendmail without dns and behind ISP (Configuring Gmail as a Sendmail email relay)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#sec-11">11. bash</a>
@@ -968,6 +973,95 @@ enumeration command (<code>enumerate*</code>).
 <div id="outline-container-sec-10-8" class="outline-3">
 <h3 id="sec-10-8"><span class="section-number-3">10.8</span> <span class="todo TODO">TODO</span> <a href="https://www.madboa.com/geek/gpg-quickstart/">A quick HOWTO for getting started with GnuPG.</a></h3>
 </div>
+<div id="outline-container-sec-10-9" class="outline-3">
+<h3 id="sec-10-9"><span class="section-number-3">10.9</span> sendmail</h3>
+<div class="outline-text-3" id="text-10-9">
+</div><div id="outline-container-sec-10-9-1" class="outline-4">
+<h4 id="sec-10-9-1"><span class="section-number-4">10.9.1</span> configure sendmail without dns and behind ISP (<a href="https://linuxconfig.org/configuring-gmail-as-sendmail-email-relay">Configuring Gmail as a Sendmail email relay</a>)</h4>
+<div class="outline-text-4" id="text-10-9-1">
+<p>
+the next steps are applied to send an email behind an ISP or an ADSL
+(without DNS) by relying on gmail auth system:
+</p>
+
+<p>
+1- make sure that you have <code>/etc/hostname and</code> <code>/etc/hosts</code>
+</p>
+<ul class="org-ul">
+<li><code>/etc/hostname</code>
+        example: <code>anyname.anydomain</code>
+</li>
+<li><code>/etc/hosts</code>
+        example: <code>127.0.0.1 localhost.localdomain localhost atlas.atlas atlas</code>
+</li>
+</ul>
+
+<p>
+2- to prevent mail proviers from blacklising your ip adress, create
+  a gmail authentification file:
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh"># mkdir -m 700 /etc/mail/authinfo/
+#  cd /etc/mail/authinfo
+</pre>
+</div>
+
+<p>
+the content ff the gmail-auth file:
+</p>
+<div class="org-src-container">
+
+<pre class="src src-text">AuthInfo: "U:root" "I:&lt;gmail adress&gt;" "P:&lt;passoword&gt;"
+</pre>
+</div>
+
+<p>
+3- create a hashmap for <code>gmail-auth</code> file:
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh"># makemap hash gmail-auth &lt; gmail-auth
+</pre>
+</div>
+<p>
+the above cammand should create a <code>gmail-auth.db</code> file inside
+<code>/etc/mail/authinfo</code>
+</p>
+
+<p>
+4- configure <code>sendmail</code>: put bellow lines into your <code>sendmail.mc</code>
+  configuration file right above first ~"MAILER"~ definition line:
+</p>
+<div class="org-src-container">
+
+<pre class="src src-conf">define(`SMART_HOST',`[smtp.gmail.com]')dnl
+define(`RELAY_MAILER_ARGS', `TCP $h 587')dnl
+define(`ESMTP_MAILER_ARGS', `TCP $h 587')dnl
+define(`confAUTH_OPTIONS', `A p')dnl
+TRUST_AUTH_MECH(`EXTERNAL DIGEST-MD5 CRAM-MD5 LOGIN PLAIN')dnl
+define(`confAUTH_MECHANISMS', `EXTERNAL GSSAPI DIGEST-MD5 CRAM-MD5 LOGIN PLAIN')dnl
+FEATURE(`authinfo',`hash -o /etc/mail/authinfo/gmail-auth.db')dnl
+</pre>
+</div>
+
+<p>
+5- rebuild the <code>sendmail</code> configuration
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh"># cd /etc/mail
+# make
+</pre>
+</div>
+<p>
+6- reload <code>sendmail</code> service:
+  <code>sudo service sendmail reload</code>
+7- turn on the less secure apps option.
+</p>
+</div>
+</div>
+</div>
 </div>
 <div id="outline-container-sec-11" class="outline-2">
 <h2 id="sec-11"><span class="section-number-2">11</span> bash</h2>
@@ -1533,7 +1627,7 @@ background-size: cover;
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: tarrsalah &lt;tarrsalah@gmail.com&gt;</p>
-<p class="date">Created: 2016-10-18 ث 13:57</p>
+<p class="date">Created: 2016-10-27 خ 17:31</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.1.50.2 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
