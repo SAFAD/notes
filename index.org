@@ -237,14 +237,14 @@ $mathpzc{uppercase or lowercase characters}$
       - ~/etc/hosts~
         example: ~127.0.0.1 localhost.localdomain localhost atlas.atlas atlas~
 
-    2- to prevent mail proviers from blacklising your ip adress, create
-      a gmail authentification file:
+    2- to prevent mail proviers from blacklisting your ip address, create
+      a gmail authentication file:
       #+BEGIN_SRC sh
       # mkdir -m 700 /etc/mail/authinfo/
       #  cd /etc/mail/authinfo
       #+END_SRC
 
-      the content ff the gmail-auth file:
+      the content of the gmail-auth file:
       #+BEGIN_SRC text
       AuthInfo: "U:root" "I:<gmail adress>" "P:<passoword>"
       #+END_SRC
@@ -300,6 +300,8 @@ $mathpzc{uppercase or lowercase characters}$
 ** add user with password
    - add user ~useradd <username>~
    - set a password ~passwd <username>~
+** change username passord
+   ~sudo passwd <username>~
 ** list all users
    - ~less /etc/passwd~
 ** add current user to a group
@@ -384,6 +386,8 @@ error_reporting(-1);
 * mysql
 ** show all grants for a user
    ~mysql > show grants for '<username>'@'<host>'~~
+** create utf-8 db
+   ~CREATE DATABASE mydatabase CHARACTER SET utf8 COLLATE utf8_general_ci;~
 * drupal-7.x
 ** basic
    - hooks are internal events.
