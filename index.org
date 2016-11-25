@@ -276,6 +276,8 @@ $mathpzc{uppercase or lowercase characters}$
     6- reload ~sendmail~ service:
       ~sudo service sendmail reload~
     7- turn on the less secure apps option.
+** find a directory
+   ~find <here> -d -name '<directory_name>'~~
 * bash
 ** parse date in shell
    ~$(date +%F)~
@@ -314,6 +316,8 @@ $mathpzc{uppercase or lowercase characters}$
     ~ssh-keygen~
    - copy the public key to remote-host using ~ssh-copy-id~
      ~ssh-copy-id -i ~/.ssh/id_rsa.pub <remote-host>~
+** automatically start a service on startup
+   ~systemctl enable httpd~
 * selinux
 ** set selinux to permissive
    ~sudo setenforce permissive~
@@ -322,6 +326,10 @@ $mathpzc{uppercase or lowercase characters}$
    ~$ docker stop $(docker ps -a -q)~
 ** remove all dangling images (untaged images)
    ~$docker rmi -f $(docker images -f "dangling=true" -q)~
+** use sqlite
+   to use an sqlite3 database (by ~php~ for example) created outside
+   of the container and mapped using ~volumes~, make sure that the
+   database is located under a recursively writable directory.
 * php
 ** install nginx/php7/mysql on ubuntu 14.04 LTS
 *** install nginx
