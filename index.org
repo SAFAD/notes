@@ -278,6 +278,8 @@ $mathpzc{uppercase or lowercase characters}$
     7- turn on the less secure apps option.
 ** find a directory
    ~find <here> -d -name '<directory_name>'~~
+** get the size of a file/directory
+   ~du -sh <file>~
 * bash
 ** parse date in shell
    ~$(date +%F)~
@@ -451,6 +453,7 @@ error_reporting(-1);
 ** virtual hosts
 * apache
 ** htacess
+** on centos, add ~IncludeOptional sites-enabled/*.conf~ to the end of ~/etc/httpd/conf/httpd.conf~
 * wordpress
 ** proper wordpress filesystem permissions and ownerships (chmod)
 - [[http://stackoverflow.com/questions/18352682/correct-file-permissions-for-wordpress][stackoverflow: Correct file permissions for WordPress]]
