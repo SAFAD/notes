@@ -1,6 +1,7 @@
 #+TITLE: Some useful links, quick tips and tricks
 #+AUTHOR: tarrsalah <tarrsalah@gmail.com>
 #+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1">
+#+HTML_HEAD: <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
 * crypto
 ** misc
@@ -515,4 +516,3 @@ background-size: cover;
 ** [[http://gabordemooij.com/index.php?p%3D%252Fmanifest][Anti Mediocracy Manifesto for Software Development]]
 ** [[https://serversforhackers.com/][Servers for hackers]]
 ** [[https://shippingdocker.com/][shippingdocker.com]]
-* To watch
