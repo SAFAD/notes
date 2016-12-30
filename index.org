@@ -512,6 +512,7 @@ background-size: cover;
 * html
 ** [[http://callmenick.com/post/force-favicon-refresh][force favicon refresh]]
 * good reads
-** TODO [[http://gabordemooij.com/index.php?p%3D%252Fmanifest][Anti Mediocracy Manifesto for Software Development]]
+** [[http://gabordemooij.com/index.php?p%3D%252Fmanifest][Anti Mediocracy Manifesto for Software Development]]
 ** [[https://serversforhackers.com/][Servers for hackers]]
 ** [[https://shippingdocker.com/][shippingdocker.com]]
+* To watch
