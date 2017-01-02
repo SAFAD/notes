@@ -333,6 +333,21 @@ $mathpzc{uppercase or lowercase characters}$
 ** poweroff a vm
    ~VBoxManage controlvm "<vm-name>"" poweroff~
 * firewalld
+* ansible
+** install ansible on ubuntu
+#+BEGIN_SRC sh
+sudo apt-get install software-properties-common
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install ansible
+#+END_SRC
+** ping a host from ansible
+   - uncomment ~#remote_user = root~ line in
+     ~/etc/ansible/ansible.cfg~ to enable ssh connecting with ~root~
+     as the default user if the ~ansible_user=<username>~ not specified in
+     the inventory.
+   - add ~<hostaname|ip>~ to ~/etc/ansible/hosts~.
+   - run ~ansible <hostname|ip> -m ping~.
 * docker
 ** stop all containers
    ~$ docker stop $(docker ps -a -q)~
