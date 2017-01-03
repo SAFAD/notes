@@ -298,6 +298,15 @@ $mathpzc{uppercase or lowercase characters}$
 
 - ~$ sudo usermod -aG docker $USER~
 - ~$ newgrp docker~
+* tmux
+** change prefix from C-b to C-a
+   - create a ~$HOME/.tmux.conf~ file.
+   - add the follwing to the conf file:
+#+BEGIN_SRC sh
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
+#+END_SRC
 * centos
 ** check centos version
    ~cat /etc/centos-release~
