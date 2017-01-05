@@ -16,11 +16,11 @@ p, li, ul, ul ul {
 }
 
 body {
-    background: url('images/bg.png') repeat;
+    background: #F1F1F1;
+    font-family: 'Raleway', 'Roboto', 'Open Sans';
 }
 
 #content {
-    font-family: 'EB Garamond', serif;
     font-size: 1.2em;
     line-height: 1.5;
     background-color: transparent;
@@ -36,8 +36,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, h7 {
-    font-style: italic;
-    font-weight: 400;
+    font-family: 'Open Sans Condensed', 'Roboto Condensed', Helvetica;
+    font-weight: bold;
     margin: 0;
 }
 
@@ -46,14 +46,21 @@ h2::first-letter {
 
 
 #table-of-contents {
-    border: 1px solid #ccc;
-    background-color: #fefefe;
-    padding: 1em;
-    margin-bottom: 2em;
+  padding: 1em;
+  display: block;
+  background: white;
+  border: 1px solid;
+  border-color: #E5E5E5 #DBDBDB #D2D2D2;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  margin-bottom: 2em;
 }
 
 #table-of-contents a {
-    color: #555;
+    font-weight: bold;
+    color: #197EB2;
+    text-decoration: none;
 }
 
 #table-of-contents h2 {
@@ -63,7 +70,15 @@ h2::first-letter {
 
 #content > div[class^='outline-'] {
     margin-bottom: 5em;
-    border: 1px solid #ccc;
+    padding: 1em 2em;
+    display: block;
+    background: white;
+    border: 1px solid;
+    border-color: #E5E5E5 #DBDBDB #D2D2D2;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+
 }
 
 div[class^='outline-'] {
